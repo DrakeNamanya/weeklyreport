@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youth Weekly Report - Power BI Project</title>
+    <title>CLUSTER PERFORMANCE DASHBOARD</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
             min-height: 100vh;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .logo-left {
+            height: 60px;
+        }
+        .logo-right {
+            height: 60px;
+        }
+        .title {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            flex: 1;
+            margin: 0 20px;
         }
         .container {
             background: rgba(255, 255, 255, 0.1);
@@ -20,138 +43,60 @@
             border-radius: 15px;
             backdrop-filter: blur(10px);
         }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
-        .project-info {
-            background: rgba(255, 255, 255, 0.2);
+        .auth-notice {
+            background: rgba(255, 193, 7, 0.2);
+            border: 2px solid #ffc107;
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
+            text-align: center;
         }
-        .download-btn {
-            display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 10px 10px 10px 0;
-            transition: background 0.3s;
+        .auth-notice h3 {
+            color: #ffc107;
+            margin-bottom: 10px;
         }
-        .download-btn:hover {
-            background: #218838;
-        }
-        .embed-btn {
-            display: inline-block;
-            background: #007bff;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 10px 10px 10px 0;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-        .embed-btn:hover {
-            background: #0056b3;
-        }
-        .instructions {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 20px;
+        .update-notice {
+            background: rgba(23, 162, 184, 0.2);
+            border: 2px solid #17a2b8;
+            padding: 15px;
             border-radius: 10px;
-            margin-top: 20px;
-        }
-        .tech-stack {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 15px 0;
-        }
-        .tech-badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9em;
+            margin: 20px 0;
+            text-align: center;
         }
         #embedContainer {
-            height: 600px;
+            height: 700px;
             width: 100%;
             background: white;
             border-radius: 10px;
             margin: 20px 0;
-            display: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=LogoBuilder" alt="LogoBuilder" class="logo-left">
+        <div class="title">CLUSTER PERFORMANCE DASHBOARD</div>
+        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=Heifer+Logo" alt="Heifer Logo" class="logo-right">
+    </div>
+
     <div class="container">
-        <h1>📊 Youth Weekly Report</h1>
-        
-        <div class="project-info">
-            <h2>Power BI Project</h2>
-            <p>This repository contains a comprehensive Power BI project for youth weekly reporting, including data models, visualizations, and analytics.</p>
-            
-            <div class="tech-stack">
-                <span class="tech-badge">Power BI</span>
-                <span class="tech-badge">DAX</span>
-                <span class="tech-badge">Data Modeling</span>
-                <span class="tech-badge">Git Version Control</span>
-            </div>
-            
-            <a href="https://github.com/DrakeNamanya/weeklyreport/archive/refs/heads/master.zip" class="download-btn">
-                📥 Download Project
-            </a>
-            <button class="embed-btn" onclick="toggleReport()">
-                🌐 View Report Online
-            </button>
+        <div class="auth-notice">
+            <h3>🔐 Authentication Required</h3>
+            <p><strong>Kindly sign in with your Heifer Account to access the Dashboard!</strong></p>
+            <p>For PSAs and Partners communicate to your cluster M&E Staff to grant you access.</p>
+        </div>
+
+        <div class="update-notice">
+            <p>📅 <strong>Check the date/activate date filter to know when it was last updated.</strong></p>
         </div>
 
         <div id="embedContainer">
-            <iframe title="youth" width="100%" height="600" src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&ctid=da6a69e3-3bcd-4f44-a340-aead0cfda08f" frameborder="0" allowFullScreen="true"></iframe>
-        </div>
-
-        <div class="instructions">
-            <h3>🚀 How to Use This Project</h3>
-            <ol>
-                <li><strong>Download:</strong> Click the download button above or clone the repository</li>
-                <li><strong>Open in Power BI Desktop:</strong> Open the <code>youth.pbip</code> file</li>
-                <li><strong>Explore:</strong> View the reports, data models, and visualizations</li>
-                <li><strong>Modify:</strong> Make changes to reports or data models as needed</li>
-                <li><strong>Embed Online:</strong> Click "View Report Online" to embed using Power BI service</li>
-            </ol>
-        </div>
-
-        <div class="project-info">
-            <h3>📁 Project Structure</h3>
-            <ul>
-                <li><strong>youth.pbip:</strong> Main Power BI Project file</li>
-                <li><strong>youth.Report/:</strong> Report definitions and visualizations</li>
-                <li><strong>youth.SemanticModel/:</strong> Data model, tables, and relationships</li>
-            </ul>
-        </div>
-
-        <div style="text-align: center; margin-top: 30px;">
-            <p>
-                <a href="https://github.com/DrakeNamanya/weeklyreport" style="color: white;">
-                    🔗 View on GitHub
-                </a>
-            </p>
+            <iframe title="cluster-performance" width="100%" height="100%" src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&ctid=da6a69e3-3bcd-4f44-a340-aead0cfda08f" frameborder="0" allowFullScreen="true"></iframe>
         </div>
     </div>
 
     <script>
-        function toggleReport() {
-            const embedContainer = document.getElementById('embedContainer');
-            if (embedContainer.style.display === 'none' || embedContainer.style.display === '') {
-                embedContainer.style.display = 'block';
-            } else {
-                embedContainer.style.display = 'none';
-            }
-        }
-
         // Show the report by default
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('embedContainer').style.display = 'block';
