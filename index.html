@@ -5,285 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLUSTER PERFORMANCE DASHBOARD</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-blue: #71a3c1;
+            --light-blue: #94c8f3;
+            --white: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #75bb75 0%, #75bb75 100%);
-            color: #ffffff;
-            min-height: 100vh;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
             padding: 20px;
-        }
-
-        .wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
+            background: linear-gradient(to right, var(--primary-blue) 0%, var(--light-blue) 100%);
+            color: #333;
+            min-height: 100vh;
         }
 
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 25px 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: slideDown 0.6s ease-out;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
 
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .logo-left, .logo-right {
-            height: 60px;
-            transition: transform 0.3s ease;
-        }
-
-        .logo-left:hover, .logo-right:hover {
-            transform: scale(1.05);
+        .logo {
+            height: 50px;
+            width: auto;
         }
 
         .title {
             text-align: center;
-            font-size: 2.5em;
-            font-weight: 700;
-            flex: 1;
-            margin: 0 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2c3e50;
             letter-spacing: 1px;
         }
 
-        .container {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 35px;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: fadeIn 0.8s ease-out;
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .notice-card {
-            padding: 20px 25px;
+        /* Dashboard Container */
+        .dashboard-card {
+            background: white;
+            padding: 10px;
             border-radius: 12px;
-            margin: 20px 0;
-            backdrop-filter: blur(10px);
-            border: 2px solid;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .notice-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .auth-notice {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.5);
-            text-align: center;
-        }
-
-        .auth-notice h3 {
-            color: #ffffff;
-            margin-bottom: 12px;
-            font-size: 1.4em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .auth-notice p {
-            line-height: 1.6;
-            margin: 8px 0;
-            font-size: 1.05em;
-        }
-
-        .auth-notice p:first-of-type {
-            font-weight: 600;
-            font-size: 1.1em;
-        }
-
-        .update-notice {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.4);
-            text-align: center;
-        }
-
-        .update-notice p {
-            font-size: 1.05em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        #embedContainer {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             height: 750px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: 15px;
-            margin: 25px 0 0 0;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            transition: box-shadow 0.3s ease;
         }
 
-        #embedContainer:hover {
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+        /* Refactored Notes Sidebar */
+        .notes-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        #embedContainer iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .note-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-blue);
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 20px;
-            }
-
-            .title {
-                font-size: 1.8em;
-                margin: 15px 0;
-            }
-
-            .logo-left, .logo-right {
-                height: 50px;
-            }
-
-            .container {
-                padding: 20px;
-            }
-
-            #embedContainer {
-                height: 600px;
-            }
-
-            .auth-notice h3 {
-                font-size: 1.2em;
-                flex-direction: column;
-            }
+        .note-box h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        /* Loading Animation */
-        .loading {
-            display: none;
-            text-align: center;
-            padding: 40px;
-            font-size: 1.2em;
+        .note-box p {
+            margin: 5px 0;
+            color: #555;
         }
 
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid #ffffff;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
+        .badge {
+            background: var(--primary-blue);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        @media (max-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .notes-sidebar {
+                flex-direction: row;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <img src="https://via.placeholder.com/150x60/ffffff/75bb75?text=LogoBuilder" alt="LogoBuilder" class="logo-left">
-            <div class="title">CLUSTER PERFORMANCE DASHBOARD</div>
-            <img src="https://via.placeholder.com/150x60/ffffff/75bb75?text=Heifer+Logo" alt="Heifer Logo" class="logo-right">
-        </div>
 
-        <div class="container">
-            <div class="auth-notice notice-card">
-                <h3>
-                    <span>🔐</span>
-                    <span>Authentication Required</span>
-                </h3>
-                <p><strong>Kindly sign in with your Heifer Account to access the Dashboard!</strong></p>
-                <p>For PSAs and Partners, communicate to your cluster M&E Staff to grant you access.</p>
+    <header class="header">
+        <img src="https://via.placeholder.com/150x50/ffffff/71a3c1?text=LogoBuilder" alt="Logo" class="logo">
+        <div class="title">CLUSTER PERFORMANCE DASHBOARD</div>
+        <img src="https://via.placeholder.com/150x50/ffffff/71a3c1?text=Heifer+Logo" alt="Heifer" class="logo">
+    </header>
+
+    <div class="main-layout">
+        <section class="dashboard-card">
+            <iframe 
+                title="cluster-performance" 
+                width="100%" 
+                height="100%" 
+                src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&ctid=da6a69e3-3bcd-4f44-a340-aead0cfda08f" 
+                frameborder="0" 
+                allowFullScreen="true"
+                style="border-radius: 8px;">
+            </iframe>
+        </section>
+
+        <aside class="notes-sidebar">
+            <div class="note-box">
+                <h4>🔐 Access Note</h4>
+                <p>Please <strong>sign in</strong> with your Heifer Account.</p>
+                <p><small>PSAs/Partners: Request access via cluster M&E Staff.</small></p>
             </div>
 
-            <div class="update-notice notice-card">
-                <p>
-                    <span>📅</span>
-                    <strong>Check the date/activate date filter to know when it was last updated.</strong>
-                </p>
+            <div class="note-box">
+                <h4>📅 Update Info</h4>
+                <p>Check the <strong>Date Filter</strong> within the report for the latest data refresh status.</p>
             </div>
-
-            <div class="loading" id="loadingIndicator">
-                <div class="spinner"></div>
-                <p>Loading dashboard...</p>
+            
+            <div class="note-box" style="border-left-color: #2c3e50;">
+                <p>Support: <span class="badge">Active</span></p>
+                <p><small>System optimized for Desktop view.</small></p>
             </div>
-
-            <div id="embedContainer">
-                <iframe 
-                    title="cluster-performance" 
-                    src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&ctid=da6a69e3-3bcd-4f44-a340-aead0cfda08f" 
-                    allowFullScreen="true">
-                </iframe>
-            </div>
-        </div>
+        </aside>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const embedContainer = document.getElementById('embedContainer');
-            const loadingIndicator = document.getElementById('loadingIndicator');
-            const iframe = embedContainer.querySelector('iframe');
-
-            // Show loading indicator
-            loadingIndicator.style.display = 'block';
-            embedContainer.style.display = 'none';
-
-            // Show embed container when iframe loads
-            iframe.addEventListener('load', function() {
-                loadingIndicator.style.display = 'none';
-                embedContainer.style.display = 'block';
-            });
-
-            // Fallback: show after 3 seconds if load event doesn't fire
-            setTimeout(function() {
-                loadingIndicator.style.display = 'none';
-                embedContainer.style.display = 'block';
-            }, 3000);
-        });
-    </script>
 </body>
 </html>
 
