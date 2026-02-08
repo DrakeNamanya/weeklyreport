@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youth Weekly Report - Power BI Project</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/powerbi-client@2.22.3/dist/powerbi.min.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -86,35 +84,6 @@
             margin: 20px 0;
             display: none;
         }
-        .config-section {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            display: none;
-        }
-        .config-input {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: none;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.8);
-            color: #333;
-        }
-        .config-label {
-            display: block;
-            margin: 10px 0 5px 0;
-            font-weight: bold;
-        }
-        .error-message {
-            background: rgba(220, 53, 69, 0.8);
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -135,38 +104,14 @@
             <a href="https://github.com/DrakeNamanya/weeklyreport/archive/refs/heads/master.zip" class="download-btn">
                 📥 Download Project
             </a>
-            <button class="embed-btn" onclick="showEmbedConfig()">
+            <button class="embed-btn" onclick="toggleReport()">
                 🌐 View Report Online
             </button>
         </div>
 
-        <div class="config-section" id="configSection">
-            <h3>🔧 Power BI Embed Configuration</h3>
-            <p>To embed your Power BI report, you need to provide the following details from your Power BI service:</p>
-            
-            <label class="config-label">Embed Access Token:</label>
-            <input type="text" id="accessToken" class="config-input" placeholder="Enter your embed token">
-            
-            <label class="config-label">Embed URL:</label>
-            <input type="text" id="embedUrl" class="config-input" placeholder="Enter embed URL">
-            
-            <label class="config-label">Report ID:</label>
-            <input type="text" id="reportId" class="config-input" placeholder="Enter report ID">
-            
-            <label class="config-label">Token Type:</label>
-            <select id="tokenType" class="config-input">
-                <option value="0">AAD Token</option>
-                <option value="1">Embed Token</option>
-            </select>
-            
-            <button class="embed-btn" onclick="embedReport()">
-                🚀 Embed Report
-            </button>
-            
-            <div class="error-message" id="errorMessage"></div>
+        <div id="embedContainer">
+            <iframe title="youth" width="100%" height="600" src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&embeddedDemo=true" frameborder="0" allowFullScreen="true"></iframe>
         </div>
-
-        <div id="embedContainer"></div>
 
         <div class="instructions">
             <h3>🚀 How to Use This Project</h3>
@@ -198,88 +143,19 @@
     </div>
 
     <script>
-        let report;
-        let models = window['powerbi-client'].models;
-
-        function showEmbedConfig() {
-            document.getElementById('configSection').style.display = 'block';
-        }
-
-        function showError(message) {
-            const errorDiv = document.getElementById('errorMessage');
-            errorDiv.textContent = message;
-            errorDiv.style.display = 'block';
-            setTimeout(() => {
-                errorDiv.style.display = 'none';
-            }, 5000);
-        }
-
-        async function embedReport() {
-            const accessToken = document.getElementById('accessToken').value;
-            const embedUrl = document.getElementById('embedUrl').value;
-            const embedReportId = document.getElementById('reportId').value;
-            const tokenType = document.getElementById('tokenType').value;
-
-            if (!accessToken || !embedUrl || !embedReportId) {
-                showError('Please fill in all required fields: Access Token, Embed URL, and Report ID');
-                return;
-            }
-
-            try {
-                // Create the embed configuration object
-                let config = {
-                    type: 'report',
-                    tokenType: tokenType == '0' ? models.TokenType.Aad : models.TokenType.Embed,
-                    accessToken: accessToken,
-                    embedUrl: embedUrl,
-                    id: embedReportId,
-                    permissions: models.Permissions.All,
-                    settings: {
-                        panes: {
-                            filters: {
-                                visible: true
-                            },
-                            pageNavigation: {
-                                visible: true
-                            }
-                        },
-                        bars: {
-                            statusBar: {
-                                visible: true
-                            }
-                        }
-                    }
-                };
-
-                // Get the embed container
-                let embedContainer = document.getElementById('embedContainer');
+        function toggleReport() {
+            const embedContainer = document.getElementById('embedContainer');
+            if (embedContainer.style.display === 'none' || embedContainer.style.display === '') {
                 embedContainer.style.display = 'block';
-
-                // Embed the report
-                report = powerbi.embed(embedContainer, config);
-
-                // Set up event handlers
-                report.on("loaded", function () {
-                    console.log("Report loaded successfully");
-                });
-
-                report.on("rendered", function () {
-                    console.log("Report rendered successfully");
-                });
-
-                report.on("error", function (event) {
-                    console.error("Report error:", event.detail);
-                    showError("Error loading report: " + (event.detail.message || "Unknown error"));
-                });
-
-                // Hide config section after successful embed
-                document.getElementById('configSection').style.display = 'none';
-
-            } catch (error) {
-                console.error("Embed error:", error);
-                showError("Failed to embed report: " + error.message);
+            } else {
+                embedContainer.style.display = 'none';
             }
         }
+
+        // Show the report by default
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('embedContainer').style.display = 'block';
+        });
     </script>
 </body>
 </html>
