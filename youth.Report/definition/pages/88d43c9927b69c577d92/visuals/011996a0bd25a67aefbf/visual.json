@@ -1,0 +1,191 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "011996a0bd25a67aefbf",
+  "position": {
+    "x": 12.687333832373971,
+    "y": 0,
+    "z": 0,
+    "height": 634.3666916186985,
+    "width": 1131.2872667200124,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "profile"
+                    }
+                  },
+                  "Property": "shg_name"
+                }
+              },
+              "queryRef": "profile.shg_name",
+              "nativeQueryRef": "shg_name",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "profile"
+                    }
+                  },
+                  "Property": "First_name"
+                }
+              },
+              "queryRef": "profile.First_name",
+              "nativeQueryRef": "First_name",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "profile"
+                    }
+                  },
+                  "Property": "Total Membershipprofile"
+                }
+              },
+              "queryRef": "profile.Total Membershipprofile",
+              "nativeQueryRef": "Total Membershipprofile"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DateTable"
+                    }
+                  },
+                  "Property": "Females_Profiled"
+                }
+              },
+              "queryRef": "DateTable.Females_Profiled",
+              "nativeQueryRef": "Females_Profiled"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DateTable"
+                    }
+                  },
+                  "Property": "PWDs_Profiled"
+                }
+              },
+              "queryRef": "DateTable.PWDs_Profiled",
+              "nativeQueryRef": "PWDs_Profiled"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Youth_TrainedY"
+                }
+              },
+              "queryRef": "Calculations2.Youth_TrainedY",
+              "nativeQueryRef": "Youth_TrainedY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Participants Received"
+                }
+              },
+              "queryRef": "Calculations2.Participants Received",
+              "nativeQueryRef": "Participants Received"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Participants Sold"
+                }
+              },
+              "queryRef": "Calculations2.Participants Sold",
+              "nativeQueryRef": "Participants Sold"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "profile.shg_name"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "profile"
+                    }
+                  },
+                  "Property": "shg_name"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "profile.First_name"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Alikutolaaghabi'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "80b34218d58561012a94",
+  "position": {
+    "x": 860.655737704918,
+    "y": 431.14754098360658,
+    "z": 0,
+    "height": 13.114754098360656,
+    "width": 86.885245901639351,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Female_Reached"
+                }
+              },
+              "queryRef": "youth.Female_Reached",
+              "nativeQueryRef": "Female_Reached"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Groups_Reached"
+                }
+              },
+              "queryRef": "youth.Groups_Reached",
+              "nativeQueryRef": "Groups_Reached"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Youth_TrainedY"
+                }
+              },
+              "queryRef": "youth.Youth_Trained_",
+              "nativeQueryRef": "Youth_TrainedY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "PWDs_Trained"
+                }
+              },
+              "queryRef": "youth.PWDs_Trained",
+              "nativeQueryRef": "PWDs_Trained"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "youth"
+                    }
+                  },
+                  "Property": "data_collector"
+                }
+              },
+              "queryRef": "youth.data_collector",
+              "nativeQueryRef": "data_collector"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DateTable"
+                    }
+                  },
+                  "Property": "Group_Names_List"
+                }
+              },
+              "queryRef": "DateTable.Group_Names_List",
+              "nativeQueryRef": "Group_Names_List"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "youth"
+                    }
+                  },
+                  "Property": "training_type"
+                }
+              },
+              "queryRef": "youth.training_type",
+              "nativeQueryRef": "training_type"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calculations2"
+                  }
+                },
+                "Property": "Female_Reached"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "stateManagement": [
+        {
+          "properties": {
+            "viewportHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "3.114754098360656D"
+                }
+              }
+            },
+            "viewportWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "76.88524590163935D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "vega": [
+        {
+          "properties": {
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\r\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\r\n  \"data\": {\r\n    \"name\": \"values\"\r\n  },\r\n  \"mark\": \"text\",\r\n  \"encoding\": {\r\n    \"row\": {\"field\": \"data_collector\", \"type\": \"ordinal\", \"header\": {\"labelAngle\": 0}},\r\n    \"column\": {\"field\": \"Metric\", \"type\": \"ordinal\"},\r\n    \"text\": {\"field\": \"Value\", \"type\": \"nominal\"},\r\n    \"tooltip\": {\"field\": \"Value\"}\r\n  },\r\n  \"transform\": [\r\n    {\r\n      \"fold\": [\r\n        \"Female_Reached\",\r\n        \"Groups_Reached\",\r\n        \"PWDs_Trained\",\r\n        \"Youth_Trained_\",\r\n        \"Group_Names_List\",\r\n        \"Training_Types_List\"\r\n      ],\r\n      \"as\": [\"Metric\", \"Value\"]\r\n    }\r\n  ],\r\n  \"config\": {\r\n    \"text\": {\r\n      \"align\": \"left\",\r\n      \"baseline\": \"middle\",\r\n      \"fontSize\": 12\r\n    },\r\n    \"header\": {\r\n      \"labelFontSize\": 13,\r\n      \"titleFontSize\": 14\r\n    }\r\n  }\r\n}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.4.1'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'1.8.2.0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

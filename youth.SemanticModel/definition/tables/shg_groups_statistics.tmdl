@@ -1,0 +1,179 @@
+table shg_groups_statistics
+	lineageTag: f6e53182-7c4d-4e79-a56f-85d4b66a73d3
+
+	column _id
+		dataType: string
+		lineageTag: 8880080f-15c1-4458-8df5-344c9c8e91ad
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column dateCreated
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 59ae7c56-f8c4-48ab-9314-5994934375c7
+		summarizeBy: none
+		sourceColumn: dateCreated
+
+		variation Variation
+			isDefault
+			relationship: 7fc1756b-b548-420a-b305-9c5b053cb023
+			defaultHierarchy: LocalDateTable_847498e5-4abf-4309-b520-a02a801d6fa7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'SHG Name'
+		dataType: string
+		lineageTag: 04b4a3d4-90d3-4916-89ec-4a00a85e4059
+		summarizeBy: none
+		sourceColumn: SHG Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SHG ID'
+		dataType: string
+		lineageTag: 5b8a759a-f187-4834-86a2-7e5f6778e58e
+		summarizeBy: none
+		sourceColumn: SHG ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column district
+		dataType: string
+		lineageTag: 4e8a55eb-aac1-45a5-8069-3e7320ad0e56
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: district
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcounty
+		dataType: string
+		lineageTag: d2ff69ea-7309-4b42-b801-05fa9d993ee0
+		summarizeBy: none
+		sourceColumn: subcounty
+
+		annotation SummarizationSetBy = Automatic
+
+	column contactperson
+		dataType: string
+		lineageTag: c93c6d05-4135-4002-a3da-a11213e2ee7d
+		summarizeBy: none
+		sourceColumn: contactperson
+
+		annotation SummarizationSetBy = Automatic
+
+	column contact_phone_number
+		dataType: int64
+		formatString: 0
+		lineageTag: bde8c39c-7a4c-482b-b1fe-89d21b6ea4b6
+		summarizeBy: sum
+		sourceColumn: contact_phone_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f237cf7-2e17-4434-aedf-36f282c28fad
+		summarizeBy: sum
+		sourceColumn: Total
+
+		annotation SummarizationSetBy = Automatic
+
+	column Female
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a422c92-6bd7-4e38-a09a-1dda5132be5d
+		summarizeBy: sum
+		sourceColumn: Female
+
+		annotation SummarizationSetBy = Automatic
+
+	column Male
+		dataType: int64
+		formatString: 0
+		lineageTag: 71c4b331-de35-42c3-8d58-72cb6aa3a484
+		summarizeBy: sum
+		sourceColumn: Male
+
+		annotation SummarizationSetBy = Automatic
+
+	column PWD
+		dataType: int64
+		formatString: 0
+		lineageTag: c44e3487-e920-4c33-8bd1-db2da143fdb8
+		summarizeBy: sum
+		sourceColumn: PWD
+
+		annotation SummarizationSetBy = Automatic
+
+	column trainings
+		dataType: string
+		lineageTag: 43214fbd-22a3-46ea-b35d-a524fdff641d
+		summarizeBy: none
+		sourceColumn: trainings
+
+		annotation SummarizationSetBy = Automatic
+
+	column no_trainings
+		dataType: int64
+		formatString: 0
+		lineageTag: f2a6ea70-965e-4677-8f03-fa577a61cde0
+		summarizeBy: sum
+		sourceColumn: no_trainings
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Participants Trained'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4170bb1b-dcb4-4960-b990-b09eab15c577
+		summarizeBy: sum
+		sourceColumn: Participants Trained
+
+		annotation SummarizationSetBy = Automatic
+
+	column value_chain
+		dataType: string
+		lineageTag: 53a0cd9c-4848-4ad5-a807-530331141102
+		summarizeBy: none
+		sourceColumn: value_chain
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_status
+		dataType: string
+		lineageTag: 7db38962-6d08-4317-a77a-397a73732e11
+		summarizeBy: none
+		sourceColumn: group_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column No
+		dataType: string
+		lineageTag: 9aa3567f-fcbf-4340-947a-5b3bf259d485
+		summarizeBy: none
+		sourceColumn: No
+
+		annotation SummarizationSetBy = Automatic
+
+	partition shg_groups_statistics = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\Personal\DATA COLLECTORS LTD\Customer\sayekatale\Downloads\shg_groups_view.xlsx"), null, true),
+				    #"shg_groups_view _Sheet" = Source{[Item="shg_groups_view ",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"shg_groups_view _Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"_id", type text}, {"dateCreated", type datetime}, {"SHG Name", type text}, {"SHG ID", type text}, {"district", type text}, {"subcounty", type text}, {"contactperson", type text}, {"contact_phone_number", Int64.Type}, {"Total", Int64.Type}, {"Female", Int64.Type}, {"Male", Int64.Type}, {"PWD", Int64.Type}, {"trainings", type text}, {"no_trainings", Int64.Type}, {"Participants Trained", Int64.Type}, {"value_chain", type text}, {"group_status", type text}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type",{{"dateCreated", type date}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

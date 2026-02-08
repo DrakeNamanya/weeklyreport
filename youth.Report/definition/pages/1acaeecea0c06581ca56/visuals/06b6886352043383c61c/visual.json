@@ -1,0 +1,225 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "06b6886352043383c61c",
+  "position": {
+    "x": 9.324985771200911,
+    "y": 117.49482071713147,
+    "z": 1000,
+    "height": 587.47410358565742,
+    "width": 1023.88343767786,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ISLA_FINAL"
+                    }
+                  },
+                  "Property": "shg_name"
+                }
+              },
+              "queryRef": "ISLA_FINAL.shg_name",
+              "nativeQueryRef": "shg_name",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ISLA_FINAL"
+                        }
+                      },
+                      "Property": "savings_value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Min(ISLA_FINAL.savings_value)",
+              "nativeQueryRef": "Sum of savings_value"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ISLA_FINAL"
+                        }
+                      },
+                      "Property": "youth_group_saving"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Min(ISLA_FINAL.youth_group_saving)",
+              "nativeQueryRef": "Sum of youth_group_saving"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ISLA_FINAL"
+                        }
+                      },
+                      "Property": "youth_loans_value_given"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Min(ISLA_FINAL.youth_loans_value_given)",
+              "nativeQueryRef": "Sum of youth_loans_value_given"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ISLA_FINAL"
+                        }
+                      },
+                      "Property": "total_fund"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ISLA_FINAL.total_fund)",
+              "nativeQueryRef": "Sum of total_fund"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ISLA_FINAL"
+                        }
+                      },
+                      "Property": "loans"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Min(ISLA_FINAL.loans)",
+              "nativeQueryRef": "Sum of loans"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ISLA_FINAL"
+                        }
+                      },
+                      "Property": "Profilers_name"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(ISLA_FINAL.shg_profiling.Profilers_name)",
+              "nativeQueryRef": "First Profilers_name"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "ISLA_FINAL"
+                      }
+                    },
+                    "Property": "Profilers_name"
+                  }
+                },
+                "Function": 3
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0dd85e891c719184079e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ISLA_FINAL"
+                  }
+                },
+                "Property": "loans_value_given"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "8e2a6a063804c5da5c64",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ISLA_FINAL"
+                  }
+                },
+                "Property": "prepared"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "isLockedInViewMode": true
+      }
+    ]
+  }
+}

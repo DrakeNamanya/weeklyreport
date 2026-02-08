@@ -1,0 +1,132 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "8ac04ae2351db8e6625d",
+  "position": {
+    "x": 0,
+    "y": 107.37520271921444,
+    "z": 0,
+    "height": 252.96869793170862,
+    "width": 902.67967031746377,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Targets"
+                    }
+                  },
+                  "Property": "Districts"
+                }
+              },
+              "queryRef": "Targets.Districts",
+              "nativeQueryRef": "Districts1",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Monthly_SHGs"
+                }
+              },
+              "queryRef": "Calculations2.Monthly_SHGs",
+              "nativeQueryRef": "Monthly_SHGs"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Monthly_Target"
+                }
+              },
+              "queryRef": "Calculations2.Monthly_Target",
+              "nativeQueryRef": "Monthly_Target"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Monthly_PWDs_3"
+                }
+              },
+              "queryRef": "Calculations2.Monthly_PWDs_3",
+              "nativeQueryRef": "Monthly_PWDs_3"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Monthly_YiW_70"
+                }
+              },
+              "queryRef": "Calculations2.Monthly_YiW_70",
+              "nativeQueryRef": "Monthly_YiW_70"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Monthly_Female_70"
+                }
+              },
+              "queryRef": "Calculations2.Monthly_Female_70",
+              "nativeQueryRef": "Monthly_Female_70"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Targets"
+                        }
+                      },
+                      "Property": "Monthly_Target"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Targets.Monthly_Target)",
+              "nativeQueryRef": "Sum of Monthly_Target"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,218 @@
+table isla_data
+	lineageTag: def46e95-f36a-46b9-aae7-2dd4db3d7464
+
+	column shg_name
+		dataType: string
+		lineageTag: 1302cc42-386b-4036-949c-4b39eab23881
+		summarizeBy: none
+		sourceColumn: shg_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_id
+		dataType: string
+		lineageTag: d675ea0e-a9aa-4575-ba3c-c6389a2230c2
+		summarizeBy: none
+		sourceColumn: shg_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_total
+		dataType: string
+		lineageTag: d98d307b-812b-46e0-8150-ac019e7bf702
+		summarizeBy: none
+		sourceColumn: shg_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_total_females
+		dataType: string
+		lineageTag: 5e7a241a-f612-4ae2-b58f-cb633e541054
+		summarizeBy: none
+		sourceColumn: shg_total_females
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_total_males
+		dataType: string
+		lineageTag: 4c0da87a-83c4-45ca-a4c7-de05638d0cd0
+		summarizeBy: none
+		sourceColumn: shg_total_males
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_total_pwds
+		dataType: string
+		lineageTag: a451c172-9a13-4374-892c-33d7958ac530
+		summarizeBy: none
+		sourceColumn: shg_total_pwds
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_saving
+		dataType: string
+		lineageTag: d8afa4fb-28b9-483a-ad9e-0b53d9606e32
+		summarizeBy: none
+		sourceColumn: group_saving
+
+		annotation SummarizationSetBy = Automatic
+
+	column youth_group_saving
+		dataType: string
+		lineageTag: 138652fd-a82a-445e-a870-2784a3532d65
+		summarizeBy: none
+		sourceColumn: youth_group_saving
+
+		annotation SummarizationSetBy = Automatic
+
+	column savings_value
+		dataType: string
+		lineageTag: e9bf41e1-5174-4d91-8d80-3b8b1034b017
+		summarizeBy: none
+		sourceColumn: savings_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column youth_savings_value
+		dataType: string
+		lineageTag: 98afb8a8-a006-4dab-b73b-d859e1a1fed5
+		summarizeBy: none
+		sourceColumn: youth_savings_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_fund
+		dataType: string
+		lineageTag: 34d49c95-f0d0-4b27-999e-fede3aecab39
+		summarizeBy: none
+		sourceColumn: total_fund
+
+		annotation SummarizationSetBy = Automatic
+
+	column loans
+		dataType: string
+		lineageTag: 71ab6e4c-02bf-4e70-b11c-0f3cdeaf8f54
+		summarizeBy: none
+		sourceColumn: loans
+
+		annotation SummarizationSetBy = Automatic
+
+	column loans_value_given
+		dataType: string
+		lineageTag: 65ceeb19-82c5-4a3f-b613-e45da0d78e7e
+		summarizeBy: none
+		sourceColumn: loans_value_given
+
+		annotation SummarizationSetBy = Automatic
+
+	column youth_loans_value_given
+		dataType: string
+		lineageTag: b2dad262-5c13-4fc2-b446-0e925e2d940a
+		summarizeBy: none
+		sourceColumn: youth_loans_value_given
+
+		annotation SummarizationSetBy = Automatic
+
+	column loans_value_repaid
+		dataType: string
+		lineageTag: b40c807e-5b7f-498b-8d5f-1d6bbe062f8a
+		summarizeBy: none
+		sourceColumn: loans_value_repaid
+
+		annotation SummarizationSetBy = Automatic
+
+	column outstanding_loan
+		dataType: string
+		lineageTag: 773e3752-3eb0-46b9-aa63-a74c1f9a411c
+		summarizeBy: none
+		sourceColumn: outstanding_loan
+
+		annotation SummarizationSetBy = Automatic
+
+	column loans_value_outstanding
+		dataType: string
+		lineageTag: 08549538-090e-4198-80cb-4e7cf0f304cf
+		summarizeBy: none
+		sourceColumn: loans_value_outstanding
+
+		annotation SummarizationSetBy = Automatic
+
+	column social_fund
+		dataType: string
+		lineageTag: a8f4bb7e-e443-4502-ac96-aef23227d40f
+		summarizeBy: none
+		sourceColumn: social_fund
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_funds
+		dataType: string
+		lineageTag: 9ce949d2-85af-47d8-9bcc-285bf0f2105e
+		summarizeBy: none
+		sourceColumn: other_funds
+
+		annotation SummarizationSetBy = Automatic
+
+	column balance
+		dataType: string
+		lineageTag: 4035abd8-79ca-4ab7-83a5-e605a7025293
+		summarizeBy: none
+		sourceColumn: balance
+
+		annotation SummarizationSetBy = Automatic
+
+	column prepared
+		dataType: string
+		lineageTag: 89c3cd52-d815-4be5-b4d2-e9f92d650e91
+		summarizeBy: none
+		sourceColumn: prepared
+
+		annotation SummarizationSetBy = Automatic
+
+	column certified
+		dataType: string
+		lineageTag: 21462797-ffe5-474c-84c9-f932cf8b82f0
+		summarizeBy: none
+		sourceColumn: certified
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviewed
+		dataType: string
+		lineageTag: 36d8b818-c88d-4422-8f67-177b40b9a4f1
+		summarizeBy: none
+		sourceColumn: reviewed
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_date
+		dataType: string
+		lineageTag: 6c5d694c-06c8-4b3d-9281-231efbcb875f
+		summarizeBy: none
+		sourceColumn: activity_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		lineageTag: dec277a8-4ebb-41cd-9d97-ce2dd72d83ed
+		summarizeBy: none
+		sourceColumn: docId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition isla_data = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://azure.saye-ug.heifer.org/gateway/api/v1/odata-feed/view/isla_form_odata_view", null, [Implementation="2.0"]),
+				    isla_form_odata_view_table = Source{[Name="isla_form_odata_view",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(isla_form_odata_view_table,{"lastUpdated", "dateCreated", "refID", "createdBy", "reviewed_sign", "prepared_sign", "Certified_sign", "instructions", "registered_shgs_view_refID", "registered_shgs_view__id"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([shg_id] <> ""))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

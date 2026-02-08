@@ -1,0 +1,161 @@
+table all_trainees_view
+	lineageTag: 67f00d79-6d56-4feb-add0-9043286c3cd2
+
+	column _id
+		dataType: string
+		lineageTag: b246e281-087f-4894-8bc5-5b3f711bc502
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column participant_name
+		dataType: string
+		lineageTag: 24aebf27-704d-49d7-927d-46e8c647b084
+		summarizeBy: none
+		sourceColumn: participant_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column participant_id
+		dataType: string
+		lineageTag: 870ed37a-2eba-4174-ba2f-8f66c00434fa
+		summarizeBy: none
+		sourceColumn: participant_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: string
+		lineageTag: 47e7031a-acaf-483f-9cd9-73196f533e66
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column training_type
+		dataType: string
+		lineageTag: f7c25432-7edc-492d-931e-3aa61507def3
+		summarizeBy: none
+		sourceColumn: training_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_date
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: c04a2246-91c7-4864-993e-7050795b38be
+		summarizeBy: none
+		sourceColumn: activity_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column data_collector
+		dataType: string
+		lineageTag: d6d45c82-34c2-4751-80c3-24e8e24491be
+		summarizeBy: none
+		sourceColumn: data_collector
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_name
+		dataType: string
+		lineageTag: 80ce21e2-b5fe-4ece-b48d-cf89df48d647
+		summarizeBy: none
+		sourceColumn: group_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column sex
+		dataType: string
+		lineageTag: c3b9632b-e3e1-4e4e-a96f-40d30b6af833
+		summarizeBy: none
+		sourceColumn: sex
+
+		annotation SummarizationSetBy = Automatic
+
+	column district
+		dataType: string
+		lineageTag: 34a68064-a419-4aea-83a0-a88f5c00bbf0
+		summarizeBy: none
+		sourceColumn: district
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcounty
+		dataType: string
+		lineageTag: 15ab9d56-fde9-48b5-980d-49e059d9e281
+		summarizeBy: none
+		sourceColumn: subcounty
+
+		annotation SummarizationSetBy = Automatic
+
+	column Parish
+		dataType: string
+		lineageTag: 2ebbbd85-aaa0-4921-8a36-5f1aa3df6adb
+		summarizeBy: none
+		sourceColumn: Parish
+
+		annotation SummarizationSetBy = Automatic
+
+	column Village
+		dataType: string
+		lineageTag: 559fef15-747c-408c-ad7a-7494d17b1b19
+		summarizeBy: none
+		sourceColumn: Village
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disability_status
+		dataType: string
+		lineageTag: eb910245-0175-4593-aa3a-1bfc9daa6aad
+		summarizeBy: none
+		sourceColumn: Disability_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employment_status
+		dataType: string
+		lineageTag: 2a1529f9-c49c-4833-92c0-64c21296055e
+		summarizeBy: none
+		sourceColumn: Employment_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employment_sector
+		dataType: string
+		lineageTag: f1fac06a-206d-43bc-9e94-e417d581de56
+		summarizeBy: none
+		sourceColumn: Employment_sector
+
+		annotation SummarizationSetBy = Automatic
+
+	column Do_for_living
+		dataType: string
+		lineageTag: db10f1c3-2f30-4724-b201-864f0f464caf
+		summarizeBy: none
+		sourceColumn: Do_for_living
+
+		annotation SummarizationSetBy = Automatic
+
+	partition all_trainees_view = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\Personal\DATA COLLECTORS LTD\Customer\sayekatale\Downloads\all_trainees_view.xlsx"), null, true),
+				    all_trainees_view_Sheet = Source{[Item="all_trainees_view",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(all_trainees_view_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"_id", type text}, {"participant_name", type text}, {"participant_id", type text}, {"group_id", type text}, {"training_type", type text}, {"activity_date", type datetime}, {"data_collector", type text}, {"group_name", type text}, {"sex", type text}, {"district", type text}, {"subcounty", type text}, {"Parish", type text}, {"Village", type text}, {"Disability_status", type text}, {"Employment_status", type text}, {"Employment_sector", type text}, {"Do_for_living", type text}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type",{{"activity_date", type date}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type1", each true)
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,274 @@
+table 'agrihubs distribution'
+	isHidden
+	lineageTag: 14157894-6c5d-46b8-a261-8bc18d7a2fdf
+
+	column _id
+		dataType: string
+		isHidden
+		lineageTag: f28052ba-7bce-4437-a4ed-9a6e614ed29f
+		summarizeBy: none
+		sourceColumn: _id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub
+		dataType: string
+		isHidden
+		lineageTag: 68c5240e-7061-4373-ba9c-6733993624c3
+		summarizeBy: none
+		sourceColumn: agrihub
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_id
+		dataType: string
+		isHidden
+		lineageTag: 3c3ff1af-ef7c-4ac4-952e-cd2e97148777
+		summarizeBy: none
+		sourceColumn: agrihub_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_unit_received
+		dataType: string
+		isHidden
+		lineageTag: 0d434bdd-47bc-4029-8e5d-995059588ab0
+		summarizeBy: none
+		sourceColumn: agrihub_unit_received
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_qty_received
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 39359b84-9720-4259-b76f-9c44d10be7b4
+		summarizeBy: sum
+		sourceColumn: agrihub_qty_received
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column __Submissions-id
+		dataType: string
+		isHidden
+		lineageTag: 0999baa6-b759-40b0-a2a1-624315c9f3e3
+		summarizeBy: none
+		sourceColumn: __Submissions-id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column dateCreated
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: f2ccff7e-df7e-4dfd-b9a6-6c6396dbaaf0
+		summarizeBy: none
+		sourceColumn: dateCreated
+
+		variation Variation
+			isDefault
+			relationship: d21a3c6a-cf66-435f-8e42-5e20b1272d16
+			defaultHierarchy: LocalDateTable_7a19a482-327c-4dff-849f-eb24c4b9099e.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastUpdated
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: dc3c28bf-1640-4f89-bc11-c8a97fcc7b5d
+		summarizeBy: none
+		sourceColumn: lastUpdated
+
+		variation Variation
+			isDefault
+			relationship: b2c21d79-2f35-41b1-8af6-de4073ab669c
+			defaultHierarchy: LocalDateTable_4b1b0551-691c-4df8-aba8-7572bfce28ee.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdBy
+		dataType: string
+		isHidden
+		lineageTag: 1e4e3718-a32d-49c1-9f88-cc3294fab3e6
+		summarizeBy: none
+		sourceColumn: createdBy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		isHidden
+		lineageTag: 3e95bccd-ee4c-4cd3-84ab-e911e6728128
+		summarizeBy: none
+		sourceColumn: docId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column partner
+		dataType: string
+		isHidden
+		lineageTag: 67637f98-cdf2-4bca-ab78-71d9cddd716f
+		summarizeBy: none
+		sourceColumn: partner
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_name
+		dataType: string
+		isHidden
+		lineageTag: 56995aeb-ce40-4d4d-9e75-d409aac255c4
+		summarizeBy: none
+		sourceColumn: district_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column material_type
+		dataType: string
+		isHidden
+		lineageTag: 4ae2333c-18d0-4493-a781-668f4350ee0c
+		summarizeBy: none
+		sourceColumn: material_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit
+		dataType: string
+		isHidden
+		lineageTag: 6dd0ae5e-f49b-43f9-8cd1-0102fa063257
+		summarizeBy: none
+		sourceColumn: unit
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column distribution_date
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 3ccacab9-1ce4-4938-b2be-d2b7ed4860bd
+		summarizeBy: none
+		sourceColumn: distribution_date
+
+		variation Variation
+			isDefault
+			relationship: b4ec7667-e026-4e9a-93d2-9db154b66d93
+			defaultHierarchy: LocalDateTable_88951336-c605-4802-836d-4750842444aa.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column participant_type
+		dataType: string
+		isHidden
+		lineageTag: 49686ab4-7faf-45fd-94f3-e6a9cd0f7c6b
+		summarizeBy: none
+		sourceColumn: participant_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column supplier
+		dataType: string
+		isHidden
+		lineageTag: 563723f6-02bd-4a38-9f21-6ca7f9f4abda
+		summarizeBy: none
+		sourceColumn: supplier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column submitterName
+		dataType: string
+		isHidden
+		lineageTag: ca1bd108-5028-40b0-87a8-5945f76a9fce
+		summarizeBy: none
+		sourceColumn: submitterName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column submissionDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 677d9e70-c272-4f66-afd3-7bda758198ae
+		summarizeBy: none
+		sourceColumn: submissionDate
+
+		variation Variation
+			isDefault
+			relationship: 18b2a18b-22d7-4b57-a962-6ccd175b8020
+			defaultHierarchy: LocalDateTable_1dd1c1dd-7491-4f0d-b735-47d1fc4c7a07.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_registration_form_agrihub_id
+		dataType: string
+		isHidden
+		lineageTag: dcf1a580-71c9-48b4-b57b-09333020ea70
+		summarizeBy: none
+		sourceColumn: agrihub_registration_form_agrihub_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_agrihub_unit_received
+		dataType: string
+		isHidden
+		lineageTag: a06a422a-1e21-490c-bfdb-6356a32d7b5f
+		summarizeBy: none
+		sourceColumn: other_agrihub_unit_received
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'agrihubs distribution' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Personal\DATA COLLECTORS LTD\Customer\sayekatale\Downloads\distributions\agrihubs.csv"),[Delimiter=",", Columns=21, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"_id", type text}, {"agrihub", type text}, {"agrihub_id", type text}, {"agrihub_unit_received", type text}, {"agrihub_qty_received", Int64.Type}, {"__Submissions-id", type text}, {"dateCreated", type datetime}, {"lastUpdated", type datetime}, {"createdBy", type text}, {"docId", type text}, {"partner", type text}, {"district_name", type text}, {"material_type", type text}, {"unit", type text}, {"distribution_date", type datetime}, {"participant_type", type text}, {"supplier", type text}, {"submitterName", type text}, {"submissionDate", type datetime}, {"agrihub_registration_form_agrihub_id", type text}, {"other_agrihub_unit_received", type text}})
+				in
+				    #"Changed Type"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

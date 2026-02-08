@@ -1,0 +1,241 @@
+table Calculations2
+	lineageTag: d56ec2c2-1197-4ec2-837e-4b140d51eedd
+
+	measure Female_PWDs = ```
+			    CALCULATE(
+			        [Base_Trainees],
+			        all_trainees_view[Disability_status] = "Yes",
+			        all_trainees_view[sex] = "Female"
+			    )
+			```
+		formatString: 0
+		lineageTag: fdd35ca3-4804-4e89-b501-f5b7314f5031
+
+	measure Female_Reached = ```
+			    CALCULATE(
+			        [Base_Trainees],
+			        all_trainees_view[sex] = "Female"
+			    )
+			```
+		formatString: 0
+		lineageTag: 437fcd2e-342b-4628-a6b1-7924d8ffe7fc
+
+	measure Groups_Reached = ```
+			    [Base_Groups]
+			```
+		formatString: 0
+		lineageTag: da99832b-8c24-44fd-98d6-2de75fd87093
+
+	measure PWDs_Trained = ```
+			    CALCULATE(
+			        [Base_Trainees],
+			        all_trainees_view[Disability_status] = "Yes"
+			    )
+			```
+		formatString: 0
+		lineageTag: db182942-a01f-4a5a-85a6-e492080ba7aa
+
+	measure Total_Trainings_types = ```
+			    DISTINCTCOUNT(all_trainees_view[training_type])
+			```
+		formatString: 0
+		lineageTag: d45eea7f-21b1-4d84-9f74-d3303cb739e1
+
+	measure Youth_TrainedY =
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(all_trainees_view, all_trainees_view[activity_date])
+			)
+		formatString: 0
+		lineageTag: 249bc61e-e418-47ad-8f9f-a668bac1454d
+
+	measure Training_Types_ListY = ```
+			
+			CONCATENATEX(
+			    VALUES(all_trainees_view[training_type]),
+			    all_trainees_view[training_type],
+			    ", ",
+			    all_trainees_view[training_type],
+			    ASC
+			)
+			
+			```
+		lineageTag: c49c7405-1979-480a-91af-fd6583791757
+
+	measure Youth_Trained_ = ```
+			
+			CALCULATE(
+			    COUNTROWS(all_trainees_view),
+			    FILTER(all_trainees_view, NOT(ISBLANK(all_trainees_view[activity_date])))
+			)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 72316570-ee1f-4990-a2fd-c94058099665
+
+	measure PWDs_TrainedY = ```
+			
+			CALCULATE(
+			    COUNTROWS(all_trainees_view),
+			    LOWER(all_trainees_view[Disability_status]) = "yes"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 0ba8fcdf-9f0c-4a7c-9228-3c62b30e2161
+
+	measure Group_Names_ListY = ```
+			
+			LEFT(
+			    CONCATENATEX(VALUES(all_trainees_view[group_name]), all_trainees_view[group_name], ", ", all_trainees_view[group_name], ASC),
+			    100
+			) & "..."
+			
+			```
+		lineageTag: ea388a43-bcfc-40f1-8e82-7e4849c252a9
+
+	measure Base_Trainees = ```
+			    DISTINCTCOUNT(all_trainees_view[participant_id])
+			```
+		formatString: 0
+		lineageTag: 746e7526-997d-4dee-9ef0-081f0d808420
+
+	measure Base_Groups = ```
+			    DISTINCTCOUNT(all_trainees_view[group_id])
+			```
+		formatString: 0
+		lineageTag: 6a643b9f-390d-4b1e-82ff-ecd80039856e
+
+	measure NewSHGs_Profiles = ```
+			
+			DISTINCTCOUNT('shg_groups_statistics'[SHG ID])
+			
+			```
+		formatString: 0
+		lineageTag: 0511c83a-b9ac-402c-a8b3-fda67c8f7059
+
+	measure 'Actual SHGs' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(shg_groups_statistics[SHG ID]),
+			    TREATAS(
+			        VALUES(targets[Districts]),
+			        shg_groups_statistics[District]
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 8fe764aa-29ba-4041-a22d-4bb29f0c06e0
+
+	measure 'Monthly Target SHGs' = ```
+			
+			MAX(Targets[Monthly_Target])
+			
+			```
+		formatString: 0
+		lineageTag: dc902c9c-e611-4092-b7e2-f616a4c0473c
+
+	measure Monthly_Target = ```
+			
+			MAX(Targets[Monthly_Target])
+			
+			```
+		formatString: 0
+		lineageTag: a0540a6b-1171-4b22-918e-38be8b9cae83
+
+	measure Monthly_SHGs =
+			
+			MAX(Targets[Monthly_SHGs])
+		formatString: 0
+		lineageTag: 72606ac5-18b7-4727-9028-e309a5a312c6
+
+	measure Monthly_Female_70 =
+			
+			MAX(Targets[Monthly_Female(70%)])
+		formatString: 0
+		lineageTag: 862e4e75-e8b4-404a-91a5-2ad2decdc0bf
+
+	measure Monthly_YiW_70 =
+			
+			MAX(Targets[Monthly_YiW(70%)])
+		formatString: 0
+		lineageTag: ee691318-6743-47a0-9215-a9352f7ebca6
+
+	measure Monthly_PWDs_3 =
+			
+			MAX(Targets[Monthly_PWDs(3%)])
+		formatString: 0
+		lineageTag: 61d7f0bf-6a80-4b7c-abad-4decb0fb5937
+
+	measure Target_Selected_Period = ```
+			
+			VAR MonthlyTarget = MAX( Targets[Monthly_Target] )
+			VAR MonthsFiltered =
+			    COUNTROWS(
+			        DISTINCT(
+			            SELECTCOLUMNS(
+			                FILTER(
+			                    all_trainees_view,
+			                    NOT( ISBLANK(all_trainees_view[activity_date]) )
+			                ),
+			                "MonthKey", YEAR(all_trainees_view[activity_date]) * 100 + MONTH(all_trainees_view[activity_date])
+			            )
+			        )
+			    )
+			RETURN
+			MonthlyTarget * MonthsFiltered
+			
+			```
+		formatString: 0
+		lineageTag: d029ed86-5f2f-453c-86bd-6b4be020d197
+
+	measure Target_Selected_Period_Display = ```
+			
+			FORMAT([Target_Selected_Period], "#,##0")
+			
+			```
+		lineageTag: 5762326c-970f-49c7-be6b-b5313d695b9c
+
+	measure SHG_Saving = ```
+			
+			DISTINCTCOUNT('ISLA_FINAL'[shg_id])
+			
+			```
+		formatString: 0
+		lineageTag: 5cc24601-bd75-4f4e-8f06-da84a7021f4b
+
+	measure 'Participants Received' = ```
+			
+			DISTINCTCOUNT(participants_shg_distribution_final[shg_participant_id])
+			
+			```
+		formatString: 0
+		lineageTag: 7ddc06b6-e168-4560-ac3b-2dd1911b105d
+
+	measure 'Participants Sold' = ```
+			
+			DISTINCTCOUNT('production_and_marketing_tool'[shg_participant_id])
+			
+			```
+		formatString: 0
+		lineageTag: 41e10885-4a61-4831-886d-9f7c0a230805
+
+	column Placeholder
+		formatString: 0
+		lineageTag: df02f068-3c10-437c-97e3-c4837435e5e0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calculations2 = calculated
+		mode: import
+		source = Row("Placeholder", BLANK())
+
+	annotation PBI_Id = 625ac301a3ec4855810478ad629f085b
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

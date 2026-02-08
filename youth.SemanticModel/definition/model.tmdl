@@ -1,0 +1,74 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-UG
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["profile","attendance_participants_2","Table","isla_data","isla_participants","shg_isla","ISLA_FINAL","all_trainees_view","shg_groups_statistics","Targets","production_and_marketing_tool","agrihubs distribution","distribution_mainform","participants_shg distribution","shg_group distribution","shg_group_distribution_final","participants_shg_distribution_final","agrihubs_distribution_final"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","TMDLView_Desktop","DevMode"]
+
+ref table DateTableTemplate_8e626c05-e8ee-41e3-931e-6f261a2e7ee0
+ref table DateTable
+ref table profile
+ref table LocalDateTable_5527be6f-6322-4e40-8b8c-243db5e5fe3a
+ref table Calculations2
+ref table isla_data
+ref table isla_participants
+ref table shg_isla
+ref table ISLA_FINAL
+ref table LocalDateTable_e286cad1-c15c-4c00-9207-2c320d3e7d28
+ref table all_trainees_view
+ref table shg_groups_statistics
+ref table LocalDateTable_847498e5-4abf-4309-b520-a02a801d6fa7
+ref table Targets
+ref table production_and_marketing_tool
+ref table LocalDateTable_6172799a-8d1f-4d05-8890-42d53701cf15
+ref table LocalDateTable_fbf9ce53-59bd-4a2d-8a5e-66afc9b26284
+ref table LocalDateTable_0b0b02b7-db28-45cd-a24c-aea59a1dddc5
+ref table LocalDateTable_4fb9a01e-eb87-4707-8831-bc7156a0fec7
+ref table LocalDateTable_598fac1e-ad94-43b1-a4eb-391bf856be6f
+ref table LocalDateTable_e1e88c4c-2c79-41dd-a215-7c83c4e99847
+ref table 'agrihubs distribution'
+ref table LocalDateTable_7a19a482-327c-4dff-849f-eb24c4b9099e
+ref table LocalDateTable_4b1b0551-691c-4df8-aba8-7572bfce28ee
+ref table LocalDateTable_88951336-c605-4802-836d-4750842444aa
+ref table LocalDateTable_1dd1c1dd-7491-4f0d-b735-47d1fc4c7a07
+ref table distribution_mainform
+ref table LocalDateTable_593603c6-6b14-4dc9-be07-50c1cf859d72
+ref table LocalDateTable_ebf01ca1-45dc-4ec4-95d3-0658bc1d2f87
+ref table LocalDateTable_c9121b13-c8f1-420f-97ba-831c9291bbaf
+ref table LocalDateTable_9ba2c1e9-95ea-4edc-bd2e-89ee946699c9
+ref table 'participants_shg distribution'
+ref table LocalDateTable_128b8e80-1dd1-4524-95bb-6ac581054833
+ref table LocalDateTable_a9fe6346-fc2c-4c01-9f68-3919df697824
+ref table LocalDateTable_df5fa4f6-9f1e-414f-8781-10edd5a84520
+ref table LocalDateTable_50f39c73-51e9-4845-b3a6-e8977682f132
+ref table 'shg_group distribution'
+ref table LocalDateTable_e44bb127-fa78-4e63-923c-e4fce108c401
+ref table LocalDateTable_84bf2d1e-436c-4321-a707-dba33f50c859
+ref table LocalDateTable_de461c8f-ab6a-40a3-8abb-148e0df3de11
+ref table LocalDateTable_05c49ae3-3924-49f5-9ff2-5324fa67ad79
+ref table shg_group_distribution_final
+ref table LocalDateTable_0d429e11-6766-4688-a7ce-2a353823af94
+ref table LocalDateTable_54880fab-75f2-4097-a848-b7e21f579d3c
+ref table LocalDateTable_20a584a7-ff1d-4fe4-b16a-f918e6f6b20f
+ref table LocalDateTable_0b3b6d1f-daf6-4e83-a5ad-357405df08d7
+ref table participants_shg_distribution_final
+ref table LocalDateTable_3414aa9b-83e1-4f86-a8e8-f58c4a604fed
+ref table LocalDateTable_b58b47cc-524b-4e28-8a3c-d30c7d8a9e73
+ref table LocalDateTable_cbefaf2a-6418-4d51-98d6-dcd2fd6fe051
+ref table LocalDateTable_e7f14bf4-f64a-45b8-8c1a-c3f665b784ab
+ref table agrihubs_distribution_final
+ref table LocalDateTable_a1fba637-5b02-40b4-98df-1930c773ffce
+ref table LocalDateTable_e274bbc9-eb62-42e6-b0bb-c9ef491380d3
+ref table LocalDateTable_9881e43e-ad2f-4c8d-9ce2-02876256d81b
+ref table LocalDateTable_f9a0e3e4-5286-49a5-bd2e-26d19759daf3
+
+ref cultureInfo en-US
+

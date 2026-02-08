@@ -1,0 +1,65 @@
+table isla_participants
+	lineageTag: 9699ad9e-f5d6-4701-b2e1-a33c14e314e0
+
+	column participant_name
+		dataType: string
+		lineageTag: adf86423-50ac-43bb-a7e2-6bc7824ccff1
+		summarizeBy: none
+		sourceColumn: participant_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_participant_id
+		dataType: string
+		lineageTag: d429d590-b1c7-46bb-abab-b7e133055e47
+		summarizeBy: none
+		sourceColumn: shg_participant_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sex
+		dataType: string
+		lineageTag: 611947ba-ddc9-4567-a14e-82107d4091c5
+		summarizeBy: none
+		sourceColumn: sex
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_disability
+		dataType: string
+		lineageTag: c0e37767-dcd8-45b1-a542-3e985586939d
+		summarizeBy: none
+		sourceColumn: shg_disability
+
+		annotation SummarizationSetBy = Automatic
+
+	column __Submissions-id
+		dataType: string
+		lineageTag: f0d8f6f9-8cc5-4834-93a0-997534f80454
+		summarizeBy: none
+		sourceColumn: __Submissions-id
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		lineageTag: 62f161fd-e8d9-4246-a8b4-60f8bf91041f
+		summarizeBy: none
+		sourceColumn: docId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition isla_participants = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://azure.saye-ug.heifer.org/gateway/api/v1/odata-feed/view/isla_form.shg_participants_odata_view", null, [Implementation="2.0"]),
+				    isla_form.shg_participants_odata_view_table = Source{[Name="isla_form.shg_participants_odata_view",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(isla_form.shg_participants_odata_view_table,{"lastUpdated", "dateCreated", "refID", "createdBy", "shg_members_view__id", "shg_members_view_refID"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

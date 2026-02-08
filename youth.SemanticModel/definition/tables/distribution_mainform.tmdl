@@ -1,0 +1,728 @@
+table distribution_mainform
+	isHidden
+	lineageTag: e1641c6b-884c-461e-820e-12f96d43b09e
+
+	column _id
+		dataType: string
+		isHidden
+		lineageTag: 4d2c788a-289c-4a1f-af59-e91e8fa083ad
+		summarizeBy: none
+		sourceColumn: _id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column partner
+		dataType: string
+		isHidden
+		lineageTag: 966b9000-e0e6-440f-98b9-5a03e0fb6989
+		summarizeBy: none
+		sourceColumn: partner
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_name
+		dataType: string
+		isHidden
+		lineageTag: 4eda29b0-6133-4437-8fd9-953b85c5ab0b
+		summarizeBy: none
+		sourceColumn: district_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcounty_name
+		dataType: string
+		isHidden
+		lineageTag: 66484fca-d0bc-45a9-ac27-be62f00003ad
+		summarizeBy: none
+		sourceColumn: Subcounty_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column parish
+		dataType: string
+		isHidden
+		lineageTag: 84146c43-c79a-47ce-9772-88fd165202f4
+		summarizeBy: none
+		sourceColumn: parish
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column village
+		dataType: string
+		isHidden
+		lineageTag: 2e52db90-0ced-4340-b77c-800589654b6a
+		summarizeBy: none
+		sourceColumn: village
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column material_type
+		dataType: string
+		isHidden
+		lineageTag: 2e7ef554-a75a-42dd-8689-bd681efc3cb4
+		summarizeBy: none
+		sourceColumn: material_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_material_type
+		dataType: string
+		isHidden
+		lineageTag: 7a9d6824-c1a0-4a2e-bc62-21f4c14606a2
+		summarizeBy: none
+		sourceColumn: other_material_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column livestock_type
+		dataType: string
+		isHidden
+		lineageTag: d1a8b272-0b3f-4324-aa64-6d03db368061
+		summarizeBy: none
+		sourceColumn: livestock_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_livestock_type
+		dataType: string
+		isHidden
+		lineageTag: a72901f2-5499-4184-b2aa-316aa9eb87dc
+		summarizeBy: none
+		sourceColumn: other_livestock_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_type
+		dataType: string
+		isHidden
+		lineageTag: c9286c14-a48f-4dc7-9c3d-7025ffe6df5e
+		summarizeBy: none
+		sourceColumn: crop_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_crop_type
+		dataType: string
+		isHidden
+		lineageTag: 932b49f2-8646-4d7f-9033-0d110130d1e9
+		summarizeBy: none
+		sourceColumn: other_crop_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column agri_resources_type
+		dataType: string
+		isHidden
+		lineageTag: 7afbf59a-17b9-4691-9d88-4ae99b9886c6
+		summarizeBy: none
+		sourceColumn: agri_resources_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_agri_resources_type
+		dataType: string
+		isHidden
+		lineageTag: 36b334cf-c04f-4dac-bff0-f0c8e9a5d0b3
+		summarizeBy: none
+		sourceColumn: other_agri_resources_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column isla_kits
+		dataType: string
+		isHidden
+		lineageTag: 368b0094-2a4b-457a-bd40-df240ee9dce0
+		summarizeBy: none
+		sourceColumn: isla_kits
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_isla_kits
+		dataType: string
+		isHidden
+		lineageTag: 91e05134-59dc-4bec-8169-ccac60730ea1
+		summarizeBy: none
+		sourceColumn: other_isla_kits
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit
+		dataType: string
+		isHidden
+		lineageTag: f1f7086e-c7a9-448e-929a-777614795d25
+		summarizeBy: none
+		sourceColumn: unit
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_other
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d3ad998f-7f34-46a8-a0ac-d5dc8c5e8792
+		summarizeBy: sum
+		sourceColumn: qty_distributed_other
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_kgs
+		dataType: double
+		isHidden
+		lineageTag: 610f2426-63b8-49e9-b380-35c13073bae7
+		summarizeBy: sum
+		sourceColumn: qty_distributed_kgs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qty_distributed_grams
+		dataType: double
+		isHidden
+		lineageTag: bf5303eb-2952-4bd0-9e79-715ef63945e2
+		summarizeBy: sum
+		sourceColumn: qty_distributed_grams
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qty_distributed_seedlings
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1e542b2c-a670-47e2-9403-1427d2c298bf
+		summarizeBy: sum
+		sourceColumn: qty_distributed_seedlings
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_liters
+		dataType: double
+		isHidden
+		lineageTag: 777f4133-c263-4be4-adce-8fd36cbcf20d
+		summarizeBy: sum
+		sourceColumn: qty_distributed_liters
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qty_distributed_packets
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 656a5220-2fec-46e6-86b0-d4dfabb4c763
+		summarizeBy: sum
+		sourceColumn: qty_distributed_packets
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_dozens
+		dataType: string
+		isHidden
+		lineageTag: ba8d0749-cfdd-46dd-b278-ff8174879a34
+		summarizeBy: none
+		sourceColumn: qty_distributed_dozens
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_sackets
+		dataType: double
+		isHidden
+		lineageTag: 22efc326-20cf-4554-ba9a-85b3e1db5eb0
+		summarizeBy: sum
+		sourceColumn: qty_distributed_sackets
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qty_distributed_tins
+		dataType: double
+		isHidden
+		lineageTag: 3d2798df-4464-4d71-85ad-3d62c43e7dd8
+		summarizeBy: sum
+		sourceColumn: qty_distributed_tins
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qty_distributed_boxes
+		dataType: string
+		isHidden
+		lineageTag: 10a5769a-87a0-4484-a707-ba8f13c7d6ae
+		summarizeBy: none
+		sourceColumn: qty_distributed_boxes
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_pieces
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 456cb4ab-0c13-4b00-a49a-eb1fa683b136
+		summarizeBy: sum
+		sourceColumn: qty_distributed_pieces
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_number
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 35e602e2-4e45-40a3-95be-53b4e12cf55f
+		summarizeBy: sum
+		sourceColumn: qty_distributed_number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_kit
+		dataType: string
+		isHidden
+		lineageTag: 6c88a20c-1fca-433d-b8eb-18e4af144d48
+		summarizeBy: none
+		sourceColumn: qty_distributed_kit
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_meters
+		dataType: string
+		isHidden
+		lineageTag: b259d135-2658-4154-973c-621c2530ae2b
+		summarizeBy: none
+		sourceColumn: qty_distributed_meters
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_hectare
+		dataType: string
+		isHidden
+		lineageTag: 307510c5-0faa-4579-8578-a2adde901ac8
+		summarizeBy: none
+		sourceColumn: qty_distributed_hectare
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_acre
+		dataType: string
+		isHidden
+		lineageTag: e6c04aac-5102-4f9c-bde2-712da7d36ee6
+		summarizeBy: none
+		sourceColumn: qty_distributed_acre
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_distributed_foot
+		dataType: string
+		isHidden
+		lineageTag: db57abc6-7fc4-401e-ba09-9d0854828df9
+		summarizeBy: none
+		sourceColumn: qty_distributed_foot
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column distribution_date
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: fa9d87e9-6225-4303-a52b-ece08c343291
+		summarizeBy: none
+		sourceColumn: distribution_date
+
+		variation Variation
+			isDefault
+			relationship: 66af8bef-6030-42f2-bdce-14df6f92baf7
+			defaultHierarchy: LocalDateTable_593603c6-6b14-4dc9-be07-50c1cf859d72.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column participant_type
+		dataType: string
+		isHidden
+		lineageTag: 7624170b-a686-4e92-96c2-35d824b076bb
+		summarizeBy: none
+		sourceColumn: participant_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_participant_type
+		dataType: string
+		isHidden
+		lineageTag: bb1f19b9-66e9-403b-80a7-2e1bb113ed1a
+		summarizeBy: none
+		sourceColumn: other_participant_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column supplier
+		dataType: string
+		isHidden
+		lineageTag: 0319708f-a733-4d67-8e37-59d44ae8e71b
+		summarizeBy: none
+		sourceColumn: supplier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_supplier
+		dataType: string
+		isHidden
+		lineageTag: a644fb49-6c89-4403-9a81-11992c3f960c
+		summarizeBy: none
+		sourceColumn: other_supplier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column distributor
+		dataType: string
+		isHidden
+		lineageTag: cf4ae4c7-91f1-48fb-84f1-7e41cfb78da5
+		summarizeBy: none
+		sourceColumn: distributor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column distributor_title
+		dataType: string
+		isHidden
+		lineageTag: fac94aac-f163-4caa-af19-5d81dab28f01
+		summarizeBy: none
+		sourceColumn: distributor_title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unique_id
+		dataType: string
+		isHidden
+		lineageTag: 4128b879-a4c5-4d01-8162-020b5caecde9
+		summarizeBy: none
+		sourceColumn: unique_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column participants_shg@odata_navigationLink
+		dataType: string
+		isHidden
+		lineageTag: a1ddbff8-b4e6-4148-baa0-1ca023ad1ed9
+		summarizeBy: none
+		sourceColumn: participants_shg@odata_navigationLink
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column submitterName
+		dataType: string
+		isHidden
+		lineageTag: f8a60e98-5e96-4dd9-b8d5-05d7d4a9d98a
+		summarizeBy: none
+		sourceColumn: submitterName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column submissionDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 437fc3ae-37e1-4691-b346-7905d95328fc
+		summarizeBy: none
+		sourceColumn: submissionDate
+
+		variation Variation
+			isDefault
+			relationship: f1dba689-66bb-4315-9043-232f0ccd77ec
+			defaultHierarchy: LocalDateTable_ebf01ca1-45dc-4ec4-95d3-0658bc1d2f87.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column updatedAt
+		dataType: string
+		isHidden
+		lineageTag: 765d0473-1dcd-48cc-bb3d-a8a4cc777d88
+		summarizeBy: none
+		sourceColumn: updatedAt
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column dateCreated
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 412048ef-c535-477f-be9b-b02240e2a9bb
+		summarizeBy: none
+		sourceColumn: dateCreated
+
+		variation Variation
+			isDefault
+			relationship: 8877b4e7-c91a-4397-99ef-ccd28ab41e75
+			defaultHierarchy: LocalDateTable_c9121b13-c8f1-420f-97ba-831c9291bbaf.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastUpdated
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 874d59cb-20d8-4baf-9392-49bedea5debd
+		summarizeBy: none
+		sourceColumn: lastUpdated
+
+		variation Variation
+			isDefault
+			relationship: dc8fbe48-a6a3-4c0e-a886-1bb3ed4152ed
+			defaultHierarchy: LocalDateTable_9ba2c1e9-95ea-4edc-bd2e-89ee946699c9.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdBy
+		dataType: string
+		isHidden
+		lineageTag: 43b3b03f-cecf-4b0d-944e-a219605e562e
+		summarizeBy: none
+		sourceColumn: createdBy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		isHidden
+		lineageTag: 7bf58101-bd7c-46a3-9cf0-6f559aabe500
+		summarizeBy: none
+		sourceColumn: docId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_group@odata_navigationLink
+		dataType: string
+		isHidden
+		lineageTag: 9aa042de-8566-41e8-b7bb-c2d1fe390467
+		summarizeBy: none
+		sourceColumn: shg_group@odata_navigationLink
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihubs@odata_navigationLink
+		dataType: string
+		isHidden
+		lineageTag: ec7cd009-6eb1-4c6e-907b-007cd919ae4c
+		summarizeBy: none
+		sourceColumn: agrihubs@odata_navigationLink
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column participants_sme@odata_navigationLink
+		dataType: string
+		isHidden
+		lineageTag: 918c039f-f468-457b-ba69-71d6d3d2f598
+		summarizeBy: none
+		sourceColumn: participants_sme@odata_navigationLink
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column participants_incubatee@odata_navigationLink
+		dataType: string
+		isHidden
+		lineageTag: 7a3e2b9b-c2c7-4bf9-9140-2b4016f94498
+		summarizeBy: none
+		sourceColumn: participants_incubatee@odata_navigationLink
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcounties_view__id
+		dataType: string
+		isHidden
+		lineageTag: b1fe09cb-f77c-4195-bcf7-d38decf7cc78
+		summarizeBy: none
+		sourceColumn: subcounties_view__id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column mse_group@odata_navigationLink
+		dataType: string
+		isHidden
+		lineageTag: d752e356-ce03-44da-a0ed-69483511af2c
+		summarizeBy: none
+		sourceColumn: mse_group@odata_navigationLink
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_1
+		dataType: string
+		isHidden
+		lineageTag: e2552f74-83c8-4f8d-9bdb-92edcae6a78c
+		summarizeBy: none
+		sourceColumn: unit_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_2
+		dataType: string
+		isHidden
+		lineageTag: d4dd3ce8-d872-4cac-a4ce-0da56439a62f
+		summarizeBy: none
+		sourceColumn: unit_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_3
+		dataType: string
+		isHidden
+		lineageTag: af0d6674-a3a6-40d6-94c9-91d1540a13d2
+		summarizeBy: none
+		sourceColumn: unit_3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_4
+		dataType: string
+		isHidden
+		lineageTag: 01bb57b2-6306-4bec-b274-76b49eb1a19a
+		summarizeBy: none
+		sourceColumn: unit_4
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_5
+		dataType: string
+		isHidden
+		lineageTag: 25c3a9f3-9d1a-4c95-9b63-52399fea3668
+		summarizeBy: none
+		sourceColumn: unit_5
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition distribution_mainform = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Personal\DATA COLLECTORS LTD\Customer\sayekatale\Downloads\distributions\distribution_form_v2.csv"),[Delimiter=",", Columns=61, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"_id", type text}, {"partner", type text}, {"district_name", type text}, {"Subcounty_name", type text}, {"parish", type text}, {"village", type text}, {"material_type", type text}, {"other_material_type", type text}, {"livestock_type", type text}, {"other_livestock_type", type text}, {"crop_type", type text}, {"other_crop_type", type text}, {"agri_resources_type", type text}, {"other_agri_resources_type", type text}, {"isla_kits", type text}, {"other_isla_kits", type text}, {"unit", type text}, {"qty_distributed_other", Int64.Type}, {"qty_distributed_kgs", type number}, {"qty_distributed_grams", type number}, {"qty_distributed_seedlings", Int64.Type}, {"qty_distributed_liters", type number}, {"qty_distributed_packets", Int64.Type}, {"qty_distributed_dozens", type text}, {"qty_distributed_sackets", type number}, {"qty_distributed_tins", type number}, {"qty_distributed_boxes", type text}, {"qty_distributed_pieces", Int64.Type}, {"qty_distributed_number", Int64.Type}, {"qty_distributed_kit", type text}, {"qty_distributed_meters", type text}, {"qty_distributed_hectare", type text}, {"qty_distributed_acre", type text}, {"qty_distributed_foot", type text}, {"distribution_date", type datetime}, {"participant_type", type text}, {"other_participant_type", type text}, {"supplier", type text}, {"other_supplier", type text}, {"distributor", type text}, {"distributor_title", type text}, {"unique_id", type text}, {"participants_shg@odata_navigationLink", type text}, {"submitterName", type text}, {"submissionDate", type datetime}, {"updatedAt", type text}, {"dateCreated", type datetime}, {"lastUpdated", type datetime}, {"createdBy", type text}, {"docId", type text}, {"shg_group@odata_navigationLink", type text}, {"agrihubs@odata_navigationLink", type text}, {"participants_sme@odata_navigationLink", type text}, {"participants_incubatee@odata_navigationLink", type text}, {"subcounties_view__id", type text}, {"mse_group@odata_navigationLink", type text}, {"unit_1", type text}, {"unit_2", type text}, {"unit_3", type text}, {"unit_4", type text}, {"unit_5", type text}})
+				in
+				    #"Changed Type"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

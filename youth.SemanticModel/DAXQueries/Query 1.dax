@@ -1,0 +1,5 @@
+EVALUATE
+FILTER(
+    youth,
+    youth[docId] = "87dfca0f6c15c3796e352698a9a301fddbe64ca3"
+)

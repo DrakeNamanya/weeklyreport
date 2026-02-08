@@ -1,0 +1,276 @@
+table ISLA_FINAL
+	lineageTag: 250f875f-5074-4d4c-a0aa-2456868bd0cf
+
+	column shg_name
+		dataType: string
+		lineageTag: 51505e96-5e93-4da0-9ca2-8441a8a4b755
+		summarizeBy: none
+		sourceColumn: shg_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_id
+		dataType: string
+		lineageTag: e665b485-71f0-451b-a72b-15baa8419e62
+		summarizeBy: none
+		sourceColumn: shg_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_total
+		dataType: string
+		lineageTag: 14adc824-93de-495c-a93d-e311a6b70de1
+		summarizeBy: none
+		sourceColumn: shg_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_total_females
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e3bf2ef-e605-49b7-b3c5-364b41c2efac
+		summarizeBy: sum
+		sourceColumn: shg_total_females
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_total_males
+		dataType: int64
+		formatString: 0
+		lineageTag: 812edd0a-767b-43a2-bb21-4acf530f1551
+		summarizeBy: sum
+		sourceColumn: shg_total_males
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_total_pwds
+		dataType: int64
+		formatString: 0
+		lineageTag: df6282e6-67ee-4897-87a1-dfa463b68c0d
+		summarizeBy: sum
+		sourceColumn: shg_total_pwds
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_saving
+		dataType: string
+		lineageTag: a4f9913e-a499-4e52-a57a-be58117e3f37
+		summarizeBy: none
+		sourceColumn: group_saving
+
+		annotation SummarizationSetBy = Automatic
+
+	column youth_group_saving
+		dataType: int64
+		formatString: 0
+		lineageTag: b05b810a-18e0-492a-b47c-31ce4fec7146
+		summarizeBy: sum
+		sourceColumn: youth_group_saving
+
+		annotation SummarizationSetBy = Automatic
+
+	column savings_value
+		dataType: int64
+		formatString: 0
+		lineageTag: 79fa464d-1c5a-45d5-962d-16709caef0bf
+		summarizeBy: sum
+		sourceColumn: savings_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column youth_savings_value
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f85f343-052d-4e51-8b6c-f90576b2f14e
+		summarizeBy: sum
+		sourceColumn: youth_savings_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_fund
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e1ac39c-5aec-46be-b995-6423b6f4f693
+		summarizeBy: sum
+		sourceColumn: total_fund
+
+		annotation SummarizationSetBy = Automatic
+
+	column loans
+		dataType: int64
+		formatString: 0
+		lineageTag: 39b70de1-6584-4bc2-8b20-f377f2975cbd
+		summarizeBy: sum
+		sourceColumn: loans
+
+		annotation SummarizationSetBy = Automatic
+
+	column loans_value_given
+		dataType: string
+		lineageTag: 3ee380e5-f8f3-45c4-a8a1-eff39549bef2
+		summarizeBy: none
+		sourceColumn: loans_value_given
+
+		annotation SummarizationSetBy = Automatic
+
+	column youth_loans_value_given
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c73bdd1-441d-4ffc-97db-42cbc83e9753
+		summarizeBy: sum
+		sourceColumn: youth_loans_value_given
+
+		annotation SummarizationSetBy = Automatic
+
+	column loans_value_repaid
+		dataType: string
+		lineageTag: 36a939eb-31c6-400f-bbfc-47179d76d522
+		summarizeBy: none
+		sourceColumn: loans_value_repaid
+
+		annotation SummarizationSetBy = Automatic
+
+	column outstanding_loan
+		dataType: string
+		lineageTag: cec41bd0-880e-4d3f-bfa3-f1166c8eeb5c
+		summarizeBy: none
+		sourceColumn: outstanding_loan
+
+		annotation SummarizationSetBy = Automatic
+
+	column loans_value_outstanding
+		dataType: string
+		lineageTag: a09e1b48-0d7a-4d74-bff9-a0ae4e54828f
+		summarizeBy: none
+		sourceColumn: loans_value_outstanding
+
+		annotation SummarizationSetBy = Automatic
+
+	column social_fund
+		dataType: string
+		lineageTag: f9b58fa6-2da5-4ab9-ae30-10a0766a098a
+		summarizeBy: none
+		sourceColumn: social_fund
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_funds
+		dataType: string
+		lineageTag: 399745db-8e62-440e-a7b0-f615d30fc7ee
+		summarizeBy: none
+		sourceColumn: other_funds
+
+		annotation SummarizationSetBy = Automatic
+
+	column balance
+		dataType: string
+		lineageTag: 31fdd191-a7bc-426b-b6b5-3e0f5c6d66cd
+		summarizeBy: none
+		sourceColumn: balance
+
+		annotation SummarizationSetBy = Automatic
+
+	column prepared
+		dataType: string
+		lineageTag: f63f7395-fc1f-48fa-bb8d-695edc7dd697
+		summarizeBy: none
+		sourceColumn: prepared
+
+		annotation SummarizationSetBy = Automatic
+
+	column certified
+		dataType: string
+		lineageTag: 6f343a9d-6511-4a2a-b68e-c09eca76f63f
+		summarizeBy: none
+		sourceColumn: certified
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviewed
+		dataType: string
+		lineageTag: aadfa1df-2b87-499f-9b5b-f436a81166ab
+		summarizeBy: none
+		sourceColumn: reviewed
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 41f8875d-a771-45b0-938b-b07e72ea6f99
+		summarizeBy: none
+		sourceColumn: activity_date
+
+		variation Variation
+			isDefault
+			relationship: 3437fa30-d8ae-4445-949e-50a97ad7d26a
+			defaultHierarchy: LocalDateTable_e286cad1-c15c-4c00-9207-2c320d3e7d28.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column docId
+		dataType: string
+		lineageTag: 3876c0f1-6ed4-45e4-9453-7f929a383869
+		summarizeBy: none
+		sourceColumn: docId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'shg_profiling.subcounty'
+		dataType: string
+		lineageTag: 2e8e7c49-23ff-44d0-b3ab-15728f493417
+		summarizeBy: none
+		sourceColumn: shg_profiling.subcounty
+
+		annotation SummarizationSetBy = Automatic
+
+	column District_SHG
+		dataType: string
+		lineageTag: 1f318acd-bd54-40ab-a65a-4322e3611cb3
+		summarizeBy: none
+		sourceColumn: District_SHG
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'shg_profiling.Parish_name'
+		dataType: string
+		lineageTag: 29b33c8b-5f05-4638-bed7-c8f5db74eb24
+		summarizeBy: none
+		sourceColumn: shg_profiling.Parish_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'shg_profiling.Village_name'
+		dataType: string
+		lineageTag: 480100d7-11bf-48e2-a29e-f1f146dcb62a
+		summarizeBy: none
+		sourceColumn: shg_profiling.Village_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Profilers_name
+		dataType: string
+		lineageTag: f86ef0da-5e54-485f-b7c8-6a50de1cc9d4
+		summarizeBy: none
+		sourceColumn: Profilers_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ISLA_FINAL = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(isla_data, {"shg_id"}, shg_isla, {"refID"}, "shg_profiling", JoinKind.LeftOuter),
+				    #"Expanded shg_profiling" = Table.ExpandTableColumn(Source, "shg_profiling", {"subcounty", "district", "Parish_name", "Village_name", "Profilers_name"}, {"shg_profiling.subcounty", "shg_profiling.district", "shg_profiling.Parish_name", "shg_profiling.Village_name", "shg_profiling.Profilers_name"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded shg_profiling",{{"activity_date", type datetime}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type",{{"activity_date", type date}, {"youth_group_saving", Int64.Type}, {"shg_total_pwds", Int64.Type}, {"shg_total_males", Int64.Type}, {"shg_total_females", Int64.Type}, {"savings_value", Int64.Type}, {"youth_savings_value", Int64.Type}, {"youth_loans_value_given", Int64.Type}, {"loans", Int64.Type}, {"total_fund", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"shg_profiling.Profilers_name", "Profilers_name"}, {"shg_profiling.district", "District_SHG"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

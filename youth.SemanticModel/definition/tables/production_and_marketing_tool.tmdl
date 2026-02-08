@@ -1,0 +1,1072 @@
+table production_and_marketing_tool
+	lineageTag: 7509ac7a-c66e-4ce2-b049-dd94d715da3d
+
+	column instructions
+		dataType: string
+		lineageTag: 7b8d6f9b-486a-4a78-9298-c347c2e0d000
+		summarizeBy: none
+		sourceColumn: instructions
+
+		annotation SummarizationSetBy = Automatic
+
+	column ip_name
+		dataType: string
+		lineageTag: dda1d457-0aa4-45f8-9757-58eff88ee4c6
+		summarizeBy: none
+		sourceColumn: ip_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column title_datacollector
+		dataType: string
+		lineageTag: 6f2e6e70-da9e-4edf-9444-835402e67eac
+		summarizeBy: none
+		sourceColumn: title_datacollector
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_title_datacollector
+		dataType: string
+		lineageTag: cf6332a4-9ce1-4577-942b-25959f4e2310
+		summarizeBy: none
+		sourceColumn: other_title_datacollector
+
+		annotation SummarizationSetBy = Automatic
+
+	column participant_type
+		dataType: string
+		lineageTag: 47225e0f-7045-4943-a3b7-d73fcaf574e6
+		summarizeBy: none
+		sourceColumn: participant_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column participant_name
+		dataType: string
+		lineageTag: edf5445e-9393-4e36-a4f7-93dcc0bf8d90
+		summarizeBy: none
+		sourceColumn: participant_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_participant_id
+		dataType: string
+		lineageTag: d86ced83-ffbb-4f8f-8752-d4c8e3019f8e
+		summarizeBy: none
+		sourceColumn: shg_participant_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sme_participant
+		dataType: string
+		lineageTag: 3f326527-4257-4bbf-9ac1-443e8b4f4079
+		summarizeBy: none
+		sourceColumn: sme_participant
+
+		annotation SummarizationSetBy = Automatic
+
+	column sme_participant_id
+		dataType: string
+		lineageTag: fb41baa2-e7f5-46fa-bccd-7fb05dac809f
+		summarizeBy: none
+		sourceColumn: sme_participant_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column incubatee_participant
+		dataType: string
+		lineageTag: e5452a15-7e63-4299-b6bb-ae11262d4d24
+		summarizeBy: none
+		sourceColumn: incubatee_participant
+
+		annotation SummarizationSetBy = Automatic
+
+	column incubatee_participant_id
+		dataType: string
+		lineageTag: 9ed343f1-e2f5-423d-98f3-cd9ab5a4a95b
+		summarizeBy: none
+		sourceColumn: incubatee_participant_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 80ce9813-36dd-4de3-abc3-a53e48b3a922
+		summarizeBy: none
+		sourceColumn: activity_date
+
+		variation Variation
+			isDefault
+			relationship: a6de8830-0d59-4ddf-9e80-a40c5705f27c
+			defaultHierarchy: LocalDateTable_6172799a-8d1f-4d05-8890-42d53701cf15.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column district_name
+		dataType: string
+		lineageTag: f62565e4-3931-4f43-a859-0ac9622e8bfa
+		summarizeBy: none
+		sourceColumn: district_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcounty_name
+		dataType: string
+		lineageTag: 0b800989-e1b7-4dab-af48-9a7c994580b1
+		summarizeBy: none
+		sourceColumn: subcounty_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column parish
+		dataType: string
+		lineageTag: d2d78977-e10e-4800-8b6f-5f1bd8681ad2
+		summarizeBy: none
+		sourceColumn: parish
+
+		annotation SummarizationSetBy = Automatic
+
+	column village
+		dataType: string
+		lineageTag: 199b5c89-432d-44d2-a7f6-e86ab8dbe992
+		summarizeBy: none
+		sourceColumn: village
+
+		annotation SummarizationSetBy = Automatic
+
+	column value_chain
+		dataType: string
+		lineageTag: dc94e2d5-6165-408c-9c1c-65c00929babe
+		summarizeBy: none
+		sourceColumn: value_chain
+
+		annotation SummarizationSetBy = Automatic
+
+	column poultry
+		dataType: string
+		lineageTag: dfa40210-1980-4520-b7b4-428947106b93
+		summarizeBy: none
+		sourceColumn: poultry
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_poultry
+		dataType: string
+		lineageTag: 85f827e0-fb9c-4eaa-8eb9-d0cb79cd7bad
+		summarizeBy: none
+		sourceColumn: other_poultry
+
+		annotation SummarizationSetBy = Automatic
+
+	column horticulture
+		dataType: string
+		lineageTag: 504d131e-58cd-4821-ae6a-afb2243f4556
+		summarizeBy: none
+		sourceColumn: horticulture
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_horticulture
+		dataType: string
+		lineageTag: a4ded57d-94cf-483e-9ad9-dd7db27a8095
+		summarizeBy: none
+		sourceColumn: other_horticulture
+
+		annotation SummarizationSetBy = Automatic
+
+	column dairy
+		dataType: string
+		lineageTag: 46c1db16-21d0-4ef1-b9fe-af609c617f6f
+		summarizeBy: none
+		sourceColumn: dairy
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_dairy
+		dataType: string
+		lineageTag: ce867471-5110-4886-8a0c-ab03fa7816e1
+		summarizeBy: none
+		sourceColumn: other_dairy
+
+		annotation SummarizationSetBy = Automatic
+
+	column beef
+		dataType: string
+		lineageTag: d6068b3b-331f-4018-b74a-e704adba881a
+		summarizeBy: none
+		sourceColumn: beef
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_beef
+		dataType: string
+		lineageTag: 2de99ee8-6544-4b97-ae8a-ff76ca52a190
+		summarizeBy: none
+		sourceColumn: other_beef
+
+		annotation SummarizationSetBy = Automatic
+
+	column oil_seeds
+		dataType: string
+		lineageTag: f388eb0e-b986-4cd0-8bf2-4be0f9b12233
+		summarizeBy: none
+		sourceColumn: oil_seeds
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_oil_seeds
+		dataType: string
+		lineageTag: 8a6bec51-8beb-48fc-99e8-0546efe2c02c
+		summarizeBy: none
+		sourceColumn: other_oil_seeds
+
+		annotation SummarizationSetBy = Automatic
+
+	column pdn_level
+		dataType: string
+		lineageTag: ab0dccde-0d9b-43e1-ba25-dd15c4ac499e
+		summarizeBy: none
+		sourceColumn: pdn_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4cdeccc5-74b9-4e26-90b7-cacab86b7bb5
+		summarizeBy: none
+		sourceColumn: year
+
+		variation Variation
+			isDefault
+			relationship: 84aec02a-66f9-41c1-a742-a1b6762b1123
+			defaultHierarchy: LocalDateTable_fbf9ce53-59bd-4a2d-8a5e-66afc9b26284.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column season
+		dataType: string
+		lineageTag: 5b460193-f4a4-4efb-a003-855699ddf61c
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column livestock_received
+		dataType: string
+		lineageTag: b574f30b-2e3e-40b0-9239-84f681c38884
+		summarizeBy: none
+		sourceColumn: livestock_received
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_livestock_received
+		dataType: string
+		lineageTag: 75c2b7df-2e9e-42dd-9a02-3407dbd95165
+		summarizeBy: none
+		sourceColumn: date_livestock_received
+
+		annotation SummarizationSetBy = Automatic
+
+	column livestock_received_pic
+		dataType: string
+		lineageTag: 085dbfbd-d8b6-4e08-a903-fea338afb9a3
+		summarizeBy: none
+		sourceColumn: livestock_received_pic
+
+		annotation SummarizationSetBy = Automatic
+
+	column livestock_received_gps
+		dataType: string
+		lineageTag: 1d826cee-9922-44ad-ba7a-7b836541c981
+		summarizeBy: none
+		sourceColumn: livestock_received_gps
+
+		annotation SummarizationSetBy = Automatic
+
+	column planting_status
+		dataType: string
+		lineageTag: 90b21402-452c-4953-9e09-2f179d61e760
+		summarizeBy: none
+		sourceColumn: planting_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column acres
+		dataType: string
+		lineageTag: 3d905905-4629-422e-a4c7-7890a15719c4
+		summarizeBy: none
+		sourceColumn: acres
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_seed
+		dataType: string
+		lineageTag: 3137105f-b20c-40bb-a4b5-fdd7ba799da1
+		summarizeBy: none
+		sourceColumn: qty_seed
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_seed_measure
+		dataType: string
+		lineageTag: 6823c07a-06a1-4c94-83ac-4191a6def9cc
+		summarizeBy: none
+		sourceColumn: qty_seed_measure
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_received
+		dataType: string
+		lineageTag: 2b05dbd1-0c05-40df-afba-46f936a709ee
+		summarizeBy: none
+		sourceColumn: date_received
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_planted
+		dataType: string
+		lineageTag: 368b31de-d825-40e0-bf20-86233ab09243
+		summarizeBy: none
+		sourceColumn: qty_planted
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_planted_measure
+		dataType: string
+		lineageTag: ba51e4e5-1b05-402d-b0a6-526fa406fc0c
+		summarizeBy: none
+		sourceColumn: qty_planted_measure
+
+		annotation SummarizationSetBy = Automatic
+
+	column planting_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 410d4d5a-c754-4f73-95c0-1f558ca0494c
+		summarizeBy: none
+		sourceColumn: planting_date
+
+		variation Variation
+			isDefault
+			relationship: 74e6aa5e-d753-47d7-9163-d6cf6cbc60b3
+			defaultHierarchy: LocalDateTable_0b0b02b7-db28-45cd-a24c-aea59a1dddc5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column germination_rate
+		dataType: string
+		lineageTag: b9f131f3-a372-4949-8af2-193d6d49adfd
+		summarizeBy: none
+		sourceColumn: germination_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column estimate_yield
+		dataType: string
+		lineageTag: 993f6797-28b9-46aa-9e12-4b10839b1dd6
+		summarizeBy: none
+		sourceColumn: estimate_yield
+
+		annotation SummarizationSetBy = Automatic
+
+	column estimate_yield_measure
+		dataType: string
+		lineageTag: 813854d8-2b47-424b-b8b7-60cd9fbcb3a5
+		summarizeBy: none
+		sourceColumn: estimate_yield_measure
+
+		annotation SummarizationSetBy = Automatic
+
+	column harvest_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 37c486f3-9fa5-47ec-b2ac-150943645433
+		summarizeBy: none
+		sourceColumn: harvest_date
+
+		variation Variation
+			isDefault
+			relationship: cabca064-19ee-4f7e-bca4-1937f3d09c2c
+			defaultHierarchy: LocalDateTable_4fb9a01e-eb87-4707-8831-bc7156a0fec7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column garden_gps
+		dataType: string
+		lineageTag: 792bac37-8f9e-469f-af31-e0b7a07e21e1
+		summarizeBy: none
+		sourceColumn: garden_gps
+
+		annotation SummarizationSetBy = Automatic
+
+	column garden_pic
+		dataType: string
+		lineageTag: 65d34d4d-09b0-4a81-93e8-c01c6161f508
+		summarizeBy: none
+		sourceColumn: garden_pic
+
+		annotation SummarizationSetBy = Automatic
+
+	column input_cost
+		dataType: string
+		lineageTag: 3364eafe-bbae-4c91-bc0d-d04ebe00d0d1
+		summarizeBy: none
+		sourceColumn: input_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_input
+		dataType: string
+		lineageTag: f6047f11-e999-4060-918d-a89a61ab9a35
+		summarizeBy: none
+		sourceColumn: other_input
+
+		annotation SummarizationSetBy = Automatic
+
+	column land_hire
+		dataType: string
+		lineageTag: 630a152b-84b2-4b9e-92bc-aea01957dd44
+		summarizeBy: none
+		sourceColumn: land_hire
+
+		annotation SummarizationSetBy = Automatic
+
+	column ploughing
+		dataType: string
+		lineageTag: c147548a-7bc5-472b-bbf6-ea65d06f67c1
+		summarizeBy: none
+		sourceColumn: ploughing
+
+		annotation SummarizationSetBy = Automatic
+
+	column seed
+		dataType: string
+		lineageTag: b1dd8c00-fa7f-4d06-9f01-60c278506021
+		summarizeBy: none
+		sourceColumn: seed
+
+		annotation SummarizationSetBy = Automatic
+
+	column planting
+		dataType: string
+		lineageTag: 71b1fb91-6a2d-4272-a562-bb22c3c7cb54
+		summarizeBy: none
+		sourceColumn: planting
+
+		annotation SummarizationSetBy = Automatic
+
+	column fertilizers
+		dataType: string
+		lineageTag: b61f10cb-9ad8-46eb-b02a-45832488d4b8
+		summarizeBy: none
+		sourceColumn: fertilizers
+
+		annotation SummarizationSetBy = Automatic
+
+	column weeding
+		dataType: string
+		lineageTag: 4be539bd-131b-4955-8a67-dfb9f074b342
+		summarizeBy: none
+		sourceColumn: weeding
+
+		annotation SummarizationSetBy = Automatic
+
+	column harvest
+		dataType: string
+		lineageTag: 10355e6c-ba1b-4bcc-8e72-3f76253b285a
+		summarizeBy: none
+		sourceColumn: harvest
+
+		annotation SummarizationSetBy = Automatic
+
+	column agro_chemicals
+		dataType: string
+		lineageTag: 7f27177c-8eef-4fe0-bb65-209597642ff1
+		summarizeBy: none
+		sourceColumn: agro_chemicals
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_input_cost
+		dataType: string
+		lineageTag: 0e970c8c-d3c9-4e89-900d-d7eea20788b7
+		summarizeBy: none
+		sourceColumn: other_input_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_planting_production_cost
+		dataType: string
+		lineageTag: 9bbb9ed3-528f-4fcb-9337-c5f304b4b36a
+		summarizeBy: none
+		sourceColumn: total_planting_production_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_harvested
+		dataType: string
+		lineageTag: d09f4abf-6dc2-4ba1-92ba-048ea61d9698
+		summarizeBy: none
+		sourceColumn: qty_harvested
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_harvested_measure
+		dataType: string
+		lineageTag: f595868f-9dfd-4851-a771-d026fe5900be
+		summarizeBy: none
+		sourceColumn: qty_harvested_measure
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_consumed
+		dataType: string
+		lineageTag: 3948ce94-9431-4ac6-8c2f-f293f8d30d92
+		summarizeBy: none
+		sourceColumn: qty_consumed
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_wasted
+		dataType: string
+		lineageTag: ca360db8-b8e7-424f-8af2-607505f6992f
+		summarizeBy: none
+		sourceColumn: qty_wasted
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_sold
+		dataType: string
+		lineageTag: 22ddb290-796a-4ff0-b79e-b635948dbe5d
+		summarizeBy: none
+		sourceColumn: qty_sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column sale
+		dataType: string
+		lineageTag: a089e294-30f0-42f0-88ee-21fd4f776f0b
+		summarizeBy: none
+		sourceColumn: sale
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_price
+		dataType: string
+		lineageTag: 3380c4c1-4bc4-4380-a89f-ae61f1908060
+		summarizeBy: none
+		sourceColumn: avg_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_planting_value
+		dataType: string
+		lineageTag: c1d08a6a-e33c-496c-984c-96a7d1e729a9
+		summarizeBy: none
+		sourceColumn: total_planting_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column net_planting
+		dataType: string
+		lineageTag: 78f9985d-d6d5-4b59-b1d2-e91cbc56dac5
+		summarizeBy: none
+		sourceColumn: net_planting
+
+		annotation SummarizationSetBy = Automatic
+
+	column cycle
+		dataType: string
+		lineageTag: 6313bdc4-5d99-40d5-92aa-53a639390a2e
+		summarizeBy: none
+		sourceColumn: cycle
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_produced
+		dataType: string
+		lineageTag: ddca64a9-a55e-4472-a691-2ec259415e16
+		summarizeBy: none
+		sourceColumn: qty_produced
+
+		annotation SummarizationSetBy = Automatic
+
+	column poultry_sold
+		dataType: string
+		lineageTag: 1f0dd53f-6125-4b69-989d-0f6510f2c997
+		summarizeBy: none
+		sourceColumn: poultry_sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column poultry_inputs
+		dataType: string
+		lineageTag: a2fa9cb7-1273-40ab-b6f6-1804bcf00b64
+		summarizeBy: none
+		sourceColumn: poultry_inputs
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_poultry_inputs
+		dataType: string
+		lineageTag: 17dfc896-e96f-414a-a0ca-f3662e5dccab
+		summarizeBy: none
+		sourceColumn: other_poultry_inputs
+
+		annotation SummarizationSetBy = Automatic
+
+	column poultry_house
+		dataType: string
+		lineageTag: e5151d38-ddb6-49d1-9085-6b78973e6144
+		summarizeBy: none
+		sourceColumn: poultry_house
+
+		annotation SummarizationSetBy = Automatic
+
+	column chicks
+		dataType: string
+		lineageTag: ab55dc63-5b84-42b0-af7d-8d875bf17e33
+		summarizeBy: none
+		sourceColumn: chicks
+
+		annotation SummarizationSetBy = Automatic
+
+	column poultry_feeds
+		dataType: string
+		lineageTag: ee431769-080e-4fbd-a2f6-92de45a8ab63
+		summarizeBy: none
+		sourceColumn: poultry_feeds
+
+		annotation SummarizationSetBy = Automatic
+
+	column vaccination
+		dataType: string
+		lineageTag: 2e9d2b61-b055-46e2-bde4-8cff74d5bf02
+		summarizeBy: none
+		sourceColumn: vaccination
+
+		annotation SummarizationSetBy = Automatic
+
+	column disease_treatment
+		dataType: string
+		lineageTag: 8d37c316-f484-4310-b7e2-3bd0408bfc32
+		summarizeBy: none
+		sourceColumn: disease_treatment
+
+		annotation SummarizationSetBy = Automatic
+
+	column other
+		dataType: string
+		lineageTag: 4a69a315-6f09-4cf0-829c-51784b06ca58
+		summarizeBy: none
+		sourceColumn: other
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_poultry_production_cost
+		dataType: string
+		lineageTag: f03e4701-787a-46e4-bb3c-676ec64712c2
+		summarizeBy: none
+		sourceColumn: total_poultry_production_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column poultry_consumed
+		dataType: string
+		lineageTag: 9b368300-a76b-4592-87d3-c6b45a4c96e8
+		summarizeBy: none
+		sourceColumn: poultry_consumed
+
+		annotation SummarizationSetBy = Automatic
+
+	column poultry_wasted
+		dataType: string
+		lineageTag: f8b0a57f-b48b-4653-bf02-894902b36319
+		summarizeBy: none
+		sourceColumn: poultry_wasted
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_bird_price
+		dataType: string
+		lineageTag: 8c2cb489-d23a-40b3-b0a1-d05dce7aa56f
+		summarizeBy: none
+		sourceColumn: avg_bird_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_poultry_value
+		dataType: string
+		lineageTag: 3578a19d-48de-4b31-8b3f-8b6d798082b8
+		summarizeBy: none
+		sourceColumn: total_poultry_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column net_poultry
+		dataType: string
+		lineageTag: a7d27376-7677-498f-bcf3-bc77ccb3f704
+		summarizeBy: none
+		sourceColumn: net_poultry
+
+		annotation SummarizationSetBy = Automatic
+
+	column milking_cows
+		dataType: string
+		lineageTag: c92facae-ec43-4d77-8b20-30da4132a0ed
+		summarizeBy: none
+		sourceColumn: milking_cows
+
+		annotation SummarizationSetBy = Automatic
+
+	column milk_produced
+		dataType: string
+		lineageTag: 83f0688d-e6fa-4dc8-927c-af0942e099e8
+		summarizeBy: none
+		sourceColumn: milk_produced
+
+		annotation SummarizationSetBy = Automatic
+
+	column milk_consumed
+		dataType: string
+		lineageTag: d49a2893-a83e-419d-af65-cb41e73990ee
+		summarizeBy: none
+		sourceColumn: milk_consumed
+
+		annotation SummarizationSetBy = Automatic
+
+	column milk_wasted
+		dataType: string
+		lineageTag: 91874738-5498-4487-948f-9fb95d4796f2
+		summarizeBy: none
+		sourceColumn: milk_wasted
+
+		annotation SummarizationSetBy = Automatic
+
+	column milk_sold
+		dataType: string
+		lineageTag: e5a270ad-a908-4d96-b8b4-1b5cded02131
+		summarizeBy: none
+		sourceColumn: milk_sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column dairy_inputs
+		dataType: string
+		lineageTag: cb2d96a8-31c5-40fb-bc4a-52dbbad29860
+		summarizeBy: none
+		sourceColumn: dairy_inputs
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_dairy_inputs
+		dataType: string
+		lineageTag: 30f2c41d-034d-4cfd-a809-e9139bb04836
+		summarizeBy: none
+		sourceColumn: other_dairy_inputs
+
+		annotation SummarizationSetBy = Automatic
+
+	column cow_shelter
+		dataType: string
+		lineageTag: a41ec150-cd7b-41b4-ae7b-a2dcee540adf
+		summarizeBy: none
+		sourceColumn: cow_shelter
+
+		annotation SummarizationSetBy = Automatic
+
+	column dairy_feeds
+		dataType: string
+		lineageTag: 716be241-96ee-4363-97f0-060e81cb25ed
+		summarizeBy: none
+		sourceColumn: dairy_feeds
+
+		annotation SummarizationSetBy = Automatic
+
+	column dairy_vaccinations
+		dataType: string
+		lineageTag: b5ca61e7-d0a0-480d-8a00-0c9c084f1e09
+		summarizeBy: none
+		sourceColumn: dairy_vaccinations
+
+		annotation SummarizationSetBy = Automatic
+
+	column dairy_disease_treatment
+		dataType: string
+		lineageTag: eb33385c-7e74-41b1-9e7f-c8595aa84f3f
+		summarizeBy: none
+		sourceColumn: dairy_disease_treatment
+
+		annotation SummarizationSetBy = Automatic
+
+	column dairy_other
+		dataType: string
+		lineageTag: 9c6c2e0e-7c51-43da-a000-c3372cff6b64
+		summarizeBy: none
+		sourceColumn: dairy_other
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_dairy_production_cost
+		dataType: string
+		lineageTag: c6f736bc-1e78-4377-aa30-1fa41dae19e1
+		summarizeBy: none
+		sourceColumn: total_dairy_production_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_dairy_price
+		dataType: string
+		lineageTag: bba64e3c-7b73-4789-9286-070acbe7c4cd
+		summarizeBy: none
+		sourceColumn: avg_dairy_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_dairy_value
+		dataType: string
+		lineageTag: 05e65fad-19d1-437e-80eb-145c748d2b56
+		summarizeBy: none
+		sourceColumn: total_dairy_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column net_dairy
+		dataType: string
+		lineageTag: 6bdb8216-6d5b-4ed1-b0bd-279e24b44370
+		summarizeBy: none
+		sourceColumn: net_dairy
+
+		annotation SummarizationSetBy = Automatic
+
+	column animals_received
+		dataType: string
+		lineageTag: 26089d6b-c985-456f-ba9d-5d1204932545
+		summarizeBy: none
+		sourceColumn: animals_received
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_animals_received
+		dataType: string
+		lineageTag: 8194e55c-75dc-4d36-86cb-71be7fa86c8e
+		summarizeBy: none
+		sourceColumn: date_animals_received
+
+		annotation SummarizationSetBy = Automatic
+
+	column animals_kept
+		dataType: string
+		lineageTag: ffd60bb8-d86a-4eb2-a4da-8d3e88a7648b
+		summarizeBy: none
+		sourceColumn: animals_kept
+
+		annotation SummarizationSetBy = Automatic
+
+	column meat_produced
+		dataType: string
+		lineageTag: 2a094f93-d511-402a-8316-c65b8a66c175
+		summarizeBy: none
+		sourceColumn: meat_produced
+
+		annotation SummarizationSetBy = Automatic
+
+	column meat_consumed
+		dataType: string
+		lineageTag: 5c9ee1bd-c385-46ca-9806-1de5ec297298
+		summarizeBy: none
+		sourceColumn: meat_consumed
+
+		annotation SummarizationSetBy = Automatic
+
+	column meat_wasted
+		dataType: string
+		lineageTag: e314d061-3652-4610-9b58-d1dc55a380fd
+		summarizeBy: none
+		sourceColumn: meat_wasted
+
+		annotation SummarizationSetBy = Automatic
+
+	column meat_sold
+		dataType: string
+		lineageTag: f09765f7-2016-4ff5-b0d8-b50d0b8ae8d3
+		summarizeBy: none
+		sourceColumn: meat_sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column beef_inputs
+		dataType: string
+		lineageTag: 6b4022ec-f4cc-443a-9f48-c09486874fdf
+		summarizeBy: none
+		sourceColumn: beef_inputs
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_beef_inputs
+		dataType: string
+		lineageTag: 2d9089df-28e8-4a40-b737-1b04718a09a4
+		summarizeBy: none
+		sourceColumn: other_beef_inputs
+
+		annotation SummarizationSetBy = Automatic
+
+	column beef_cow_shelter
+		dataType: string
+		lineageTag: 40626783-d126-4db1-825f-f46f1044ff9f
+		summarizeBy: none
+		sourceColumn: beef_cow_shelter
+
+		annotation SummarizationSetBy = Automatic
+
+	column beef_feeds
+		dataType: string
+		lineageTag: 79cc00c6-0497-4e0a-80c0-25db4d26f7a4
+		summarizeBy: none
+		sourceColumn: beef_feeds
+
+		annotation SummarizationSetBy = Automatic
+
+	column beef_vaccinations
+		dataType: string
+		lineageTag: 0026a396-679b-45e7-b293-f097c950882f
+		summarizeBy: none
+		sourceColumn: beef_vaccinations
+
+		annotation SummarizationSetBy = Automatic
+
+	column beef_disease_treatment
+		dataType: string
+		lineageTag: d2646033-3b0a-438d-8200-f373d103baf3
+		summarizeBy: none
+		sourceColumn: beef_disease_treatment
+
+		annotation SummarizationSetBy = Automatic
+
+	column beef_other
+		dataType: string
+		lineageTag: 681af9d8-f8cb-4042-842d-749a0e0d5cbb
+		summarizeBy: none
+		sourceColumn: beef_other
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_beef_production_cost
+		dataType: string
+		lineageTag: c2357ae1-335c-4d44-b68f-6ef3556565d5
+		summarizeBy: none
+		sourceColumn: total_beef_production_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_beef_price
+		dataType: string
+		lineageTag: c761c0e3-7e6b-41ff-ac7e-45495a4d6bac
+		summarizeBy: none
+		sourceColumn: avg_beef_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_beef_value
+		dataType: string
+		lineageTag: d005cc83-ef80-4a4a-9576-eb535b6ee1d3
+		summarizeBy: none
+		sourceColumn: total_beef_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column net_beef
+		dataType: string
+		lineageTag: 54933a45-fa22-47dc-b8d1-fc63b7a4cc50
+		summarizeBy: none
+		sourceColumn: net_beef
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdBy
+		dataType: string
+		lineageTag: b0c3e9ea-a655-4395-b7be-0a58c1380c55
+		summarizeBy: none
+		sourceColumn: createdBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		lineageTag: a8f29a53-29d1-47ff-829b-d893e01f389a
+		summarizeBy: none
+		sourceColumn: docId
+
+		annotation SummarizationSetBy = Automatic
+
+	column refID
+		dataType: string
+		lineageTag: 2a23e89d-a2c9-4745-90c7-49a189c0ec4b
+		summarizeBy: none
+		sourceColumn: refID
+
+		annotation SummarizationSetBy = Automatic
+
+	column dateCreated
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e49f7b74-9722-4b59-bce1-ff495162a99c
+		summarizeBy: none
+		sourceColumn: dateCreated
+
+		variation Variation
+			isDefault
+			relationship: cf0ed245-e3fd-4df4-9fbe-50592515d7a8
+			defaultHierarchy: LocalDateTable_598fac1e-ad94-43b1-a4eb-391bf856be6f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column lastUpdated
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e2b1a144-d3c0-48a0-b87d-377f57c667a4
+		summarizeBy: none
+		sourceColumn: lastUpdated
+
+		variation Variation
+			isDefault
+			relationship: a967cec8-028e-4f48-ae81-d4d355159597
+			defaultHierarchy: LocalDateTable_e1e88c4c-2c79-41dd-a215-7c83c4e99847.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition production_and_marketing_tool = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://azure.saye-ug.heifer.org/gateway/api/v1/odata-feed/view/production_and_marketing_tool_odata_view", null, [Implementation="2.0"]),
+				    production_and_marketing_tool_odata_view_table = Source{[Name="production_and_marketing_tool_odata_view",Signature="table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(production_and_marketing_tool_odata_view_table,{{"activity_date", type datetime}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type",{{"activity_date", type date}, {"year", type datetime}}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Changed Type1",{{"year", type date}, {"planting_date", type datetime}}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Changed Type2",{{"planting_date", type date}, {"harvest_date", type datetime}}),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Changed Type3",{{"harvest_date", type date}, {"dateCreated", type datetime}}),
+				    #"Changed Type5" = Table.TransformColumnTypes(#"Changed Type4",{{"dateCreated", type date}, {"lastUpdated", type datetime}}),
+				    #"Changed Type6" = Table.TransformColumnTypes(#"Changed Type5",{{"lastUpdated", type date}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type6", each true)
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

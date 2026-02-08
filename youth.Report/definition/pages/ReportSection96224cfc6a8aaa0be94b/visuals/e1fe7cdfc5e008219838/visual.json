@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "e1fe7cdfc5e008219838",
+  "position": {
+    "x": 33.717330162577454,
+    "y": 142.36206068643816,
+    "z": 0,
+    "height": 531.984542565111,
+    "width": 1033.9981249857087,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "all_trainees_view"
+                    }
+                  },
+                  "Property": "data_collector"
+                }
+              },
+              "queryRef": "all_trainees_view.data_collector",
+              "nativeQueryRef": "data_collector",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Female_Reached"
+                }
+              },
+              "queryRef": "youth.Female_Reached",
+              "nativeQueryRef": "Female_Reached"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Groups_Reached"
+                }
+              },
+              "queryRef": "youth.Groups_Reached",
+              "nativeQueryRef": "Groups_Reached"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Female_PWDs"
+                }
+              },
+              "queryRef": "youth.Female_PWDs",
+              "nativeQueryRef": "Female_PWDs"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "PWDs_Trained"
+                }
+              },
+              "queryRef": "youth.PWDs_Trained",
+              "nativeQueryRef": "PWDs_Trained"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Youth_TrainedY"
+                }
+              },
+              "queryRef": "youth.Youth_Trained_ToDate",
+              "nativeQueryRef": "Youth_Trained_ToDate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DateTable"
+                    }
+                  },
+                  "Property": "Group_Names_List"
+                }
+              },
+              "queryRef": "DateTable.Group_Names_List",
+              "nativeQueryRef": "Group_Names_List"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DateTable"
+                    }
+                  },
+                  "Property": "Training_Types_List"
+                }
+              },
+              "queryRef": "DateTable.Training_Types_List",
+              "nativeQueryRef": "Training_Types_List"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calculations2"
+                  }
+                },
+                "Property": "Youth_TrainedY"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

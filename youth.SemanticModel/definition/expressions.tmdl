@@ -1,0 +1,26 @@
+expression attendance_participants_2 =
+		let
+		    Source = OData.Feed("https://azure.saye-ug.heifer.org/gateway/api/v1/odata-feed/view/attendance_registration_form_v2_odata_view", null, [Implementation="2.0"]),
+		    attendance_registration_form_v2_odata_view_table = Source{[Name="attendance_registration_form_v2_odata_view",Signature="table"]}[Data],
+		    #"Removed Columns" = Table.RemoveColumns(attendance_registration_form_v2_odata_view_table,{"instructions", "time_entry", "attendance_photo", "no_days", "hours"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([ip_name] = "heifer")),
+		    #"Removed Columns1" = Table.RemoveColumns(#"Filtered Rows",{"sme_total", "sme_total_females", "sme_total_males", "sme_total_pwds", "incubatees_total", "incubatees_total_females", "incubatees_total_males", "incubatees_total_pwds", "comments", "signature", "time_end", "createdBy", "refID", "dateCreated", "lastUpdated", "attendance_no", "subcounty_name"})
+		in
+		    #"Removed Columns1"
+	lineageTag: 80082765-1403-488b-a3da-25d46511d5f6
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Table =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Measures = _t]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Measures", type text}}),
+		    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Measures"})
+		in
+		    #"Removed Columns"
+	lineageTag: b8e45134-771f-469e-94ba-3c1ca285b992
+
+	annotation PBI_ResultType = Table
+

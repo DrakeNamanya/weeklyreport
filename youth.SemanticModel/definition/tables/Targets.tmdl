@@ -1,0 +1,93 @@
+table Targets
+	lineageTag: 7b963ab1-4f40-4907-b1fe-548f4f79ab8f
+
+	column Cluster
+		dataType: string
+		lineageTag: 6db637bf-fe94-4811-953a-85e6e107dbfa
+		summarizeBy: none
+		sourceColumn: Cluster
+
+		annotation SummarizationSetBy = Automatic
+
+	column Districts
+		dataType: string
+		lineageTag: 9dd5e6e8-5fbf-4e7b-bb6c-45ba3f1c4016
+		summarizeBy: none
+		sourceColumn: Districts
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: f5144b31-1a47-42a8-a7c1-cd2c4bfb45c2
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Monthly_Target
+		dataType: int64
+		formatString: 0
+		lineageTag: ac4e0496-8d21-40df-9737-7d759b5e17fe
+		summarizeBy: sum
+		sourceColumn: Monthly_Target
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monthly_SHGs
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c4d8656-1ff2-418a-9aa0-c2258a5361c1
+		summarizeBy: sum
+		sourceColumn: Monthly_SHGs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monthly_YiW(70%)
+		dataType: int64
+		formatString: 0
+		lineageTag: 7cae8121-89cb-4adf-9ae0-961bdab38b70
+		summarizeBy: sum
+		sourceColumn: Monthly_YiW(70%)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monthly_Female(70%)
+		dataType: int64
+		formatString: 0
+		lineageTag: 364ac16d-4dc3-4c2d-b84a-c1a9c6d7f51b
+		summarizeBy: sum
+		sourceColumn: Monthly_Female(70%)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monthly_PWDs(3%)
+		dataType: int64
+		formatString: 0
+		lineageTag: b87de4a5-6dc7-49c9-8e50-7cf9c8ba7e08
+		summarizeBy: sum
+		sourceColumn: Monthly_PWDs(3%)
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Targets = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\M&E\Targets.xlsx"), null, true),
+				    Targets_Sheet = Source{[Item="Targets",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Targets_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Cluster", type text}, {"Districts", type text}, {"Date", type date}, {"Monthly_Target", Int64.Type}, {"Monthly_SHGs", Int64.Type}, {"Monthly_YiW(70%)", Int64.Type}, {"Monthly_Female(70%)", Int64.Type}, {"Monthly_PWDs(3%)", Int64.Type}, {"Column9", type any}, {"Column10", type any}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column10", "Column9"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

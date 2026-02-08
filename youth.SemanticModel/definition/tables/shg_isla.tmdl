@@ -1,0 +1,361 @@
+table shg_isla
+	lineageTag: c63a5f74-5e73-481a-b1ea-dbb5304c2ba1
+
+	column shg_name
+		dataType: string
+		lineageTag: 60b51b7c-60c5-4605-8ca1-6c1bf90ef46a
+		summarizeBy: none
+		sourceColumn: shg_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcounty
+		dataType: string
+		lineageTag: 3631c79f-cd2b-4318-8123-8cae0c367f14
+		summarizeBy: none
+		sourceColumn: subcounty
+
+		annotation SummarizationSetBy = Automatic
+
+	column district
+		dataType: string
+		lineageTag: ee4880ab-745f-43f7-9c3a-af7018f2c57f
+		summarizeBy: none
+		sourceColumn: district
+
+		annotation SummarizationSetBy = Automatic
+
+	column Parish_name
+		dataType: string
+		lineageTag: e2924d85-7567-4d99-8f4b-194aa8490bf3
+		summarizeBy: none
+		sourceColumn: Parish_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Village_name
+		dataType: string
+		lineageTag: f15ce275-99cd-4767-a1fb-0145b87d7874
+		summarizeBy: none
+		sourceColumn: Village_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assessment_date
+		dataType: string
+		lineageTag: f4123b67-4b45-40a7-bbea-78e08b00edfe
+		summarizeBy: none
+		sourceColumn: Assessment_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column contactperson
+		dataType: string
+		lineageTag: e191a7d0-61f9-4486-b11d-0e9d3c317d3e
+		summarizeBy: none
+		sourceColumn: contactperson
+
+		annotation SummarizationSetBy = Automatic
+
+	column primay_contact
+		dataType: string
+		lineageTag: e03632a6-1e04-4da5-9d9c-110264118115
+		summarizeBy: none
+		sourceColumn: primay_contact
+
+		annotation SummarizationSetBy = Automatic
+
+	column secondary_contact
+		dataType: string
+		lineageTag: 503a2711-7079-4403-a2e8-c0faa1ddb8b7
+		summarizeBy: none
+		sourceColumn: secondary_contact
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group_type
+		dataType: string
+		lineageTag: a7d2586c-3692-4e3e-a2b4-6c4ed4415cfc
+		summarizeBy: none
+		sourceColumn: Group_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group_registration
+		dataType: string
+		lineageTag: 1d189c14-7bb9-4882-b2bc-24fc0182a22e
+		summarizeBy: none
+		sourceColumn: Group_registration
+
+		annotation SummarizationSetBy = Automatic
+
+	column Registration_date
+		dataType: string
+		lineageTag: 79112392-5f4d-42ee-803b-05420e9606c2
+		summarizeBy: none
+		sourceColumn: Registration_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column registration_level
+		dataType: string
+		lineageTag: 16024cb5-c8c9-45ac-9238-e9c7a00d5dc7
+		summarizeBy: none
+		sourceColumn: registration_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_owned_items
+		dataType: string
+		lineageTag: 847dd0a5-1e34-4997-8b96-253895f48cf6
+		summarizeBy: none
+		sourceColumn: group_owned_items
+
+		annotation SummarizationSetBy = Automatic
+
+	column Meeting_frqy
+		dataType: string
+		lineageTag: 97c0e5a3-7189-4fc7-ba54-437a67591765
+		summarizeBy: none
+		sourceColumn: Meeting_frqy
+
+		annotation SummarizationSetBy = Automatic
+
+	column Offered_services
+		dataType: string
+		lineageTag: 1bdcfe06-09e4-4ddc-b421-2d5292100a1d
+		summarizeBy: none
+		sourceColumn: Offered_services
+
+		annotation SummarizationSetBy = Automatic
+
+	column offered_services_others
+		dataType: string
+		lineageTag: 21762e06-e27f-458e-9b7c-307ed1663a49
+		summarizeBy: none
+		sourceColumn: offered_services_others
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group_enterprises
+		dataType: string
+		lineageTag: 3b2f73ea-12a6-4af8-a394-6821cc2290a5
+		summarizeBy: none
+		sourceColumn: Group_enterprises
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_enterprise_other
+		dataType: string
+		lineageTag: 6b2d31bd-7ed6-427b-b0df-2135785fddfb
+		summarizeBy: none
+		sourceColumn: group_enterprise_other
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level_experience
+		dataType: string
+		lineageTag: af477394-3c1c-43a7-b5d8-a6b41cf15435
+		summarizeBy: none
+		sourceColumn: Level_experience
+
+		annotation SummarizationSetBy = Automatic
+
+	column sell_type
+		dataType: string
+		lineageTag: 8068f199-03e8-4028-8516-927a08bfa2d4
+		summarizeBy: none
+		sourceColumn: sell_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_sells
+		dataType: string
+		lineageTag: b1ecf70e-b1de-4693-bf57-6753b5c001cd
+		summarizeBy: none
+		sourceColumn: group_sells
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_sells_others
+		dataType: string
+		lineageTag: b62e3625-4fcf-4532-bd30-2871dd2685b9
+		summarizeBy: none
+		sourceColumn: group_sells_others
+
+		annotation SummarizationSetBy = Automatic
+
+	column localseed_business
+		dataType: string
+		lineageTag: e2dfbfde-5e12-4834-8ebc-716b6e863b79
+		summarizeBy: none
+		sourceColumn: localseed_business
+
+		annotation SummarizationSetBy = Automatic
+
+	column Major_owned_resources
+		dataType: string
+		lineageTag: c49443c6-96ed-4aab-a77e-96a31ae765b5
+		summarizeBy: none
+		sourceColumn: Major_owned_resources
+
+		annotation SummarizationSetBy = Automatic
+
+	column Block_farming_potential
+		dataType: string
+		lineageTag: 9aa7ffb8-65a7-4450-ad00-d81b74874cd0
+		summarizeBy: none
+		sourceColumn: Block_farming_potential
+
+		annotation SummarizationSetBy = Automatic
+
+	column Org_support
+		dataType: string
+		lineageTag: e2784dac-407c-4f2f-aac4-bcf20941b508
+		summarizeBy: none
+		sourceColumn: Org_support
+
+		annotation SummarizationSetBy = Automatic
+
+	column NGO_Name
+		dataType: string
+		lineageTag: f611d93b-d610-491b-b33a-07354c73fd10
+		summarizeBy: none
+		sourceColumn: NGO_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Needed_support
+		dataType: string
+		lineageTag: c6fc1612-18eb-4216-85d5-ca158ef1d342
+		summarizeBy: none
+		sourceColumn: Needed_support
+
+		annotation SummarizationSetBy = Automatic
+
+	column Profilers_name
+		dataType: string
+		lineageTag: a4c99c36-ec53-46f9-b2a3-1ce1ba786ed3
+		summarizeBy: none
+		sourceColumn: Profilers_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Profilers_title
+		dataType: string
+		lineageTag: f5954cf0-e080-4c7c-8595-290c61d117c9
+		summarizeBy: none
+		sourceColumn: Profilers_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column partner
+		dataType: string
+		lineageTag: feae6b39-7d5d-4d03-9472-ac9938a9e702
+		summarizeBy: none
+		sourceColumn: partner
+
+		annotation SummarizationSetBy = Automatic
+
+	column profiling_date
+		dataType: string
+		lineageTag: b4fc62ce-4384-4d01-8556-bcff09d5d687
+		summarizeBy: none
+		sourceColumn: profiling_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cluster_name
+		dataType: string
+		lineageTag: 3eea6054-9955-4ff4-bbed-121197932e28
+		summarizeBy: none
+		sourceColumn: Cluster_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Corhort
+		dataType: string
+		lineageTag: c436e432-8f9c-452a-8aeb-c01ce537ae5c
+		summarizeBy: none
+		sourceColumn: Corhort
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub
+		dataType: string
+		lineageTag: 47fb694b-c811-4a11-9932-088f604cb408
+		summarizeBy: none
+		sourceColumn: agrihub
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_registration_form_refID
+		dataType: string
+		lineageTag: 0c9e19b8-0aff-415e-a980-feb0cff9839f
+		summarizeBy: none
+		sourceColumn: agrihub_registration_form_refID
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_registration_form__id
+		dataType: string
+		lineageTag: d10d2259-5058-4751-983f-b20ee88b2dfc
+		summarizeBy: none
+		sourceColumn: agrihub_registration_form__id
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdBy
+		dataType: string
+		lineageTag: 9a0ec910-6133-46a1-9f40-9cf10218999b
+		summarizeBy: none
+		sourceColumn: createdBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		lineageTag: 299b6f88-2c5f-4067-a67f-551523acb66c
+		summarizeBy: none
+		sourceColumn: docId
+
+		annotation SummarizationSetBy = Automatic
+
+	column refID
+		dataType: string
+		lineageTag: c0f131df-362e-4865-937c-4aa733b0e957
+		summarizeBy: none
+		sourceColumn: refID
+
+		annotation SummarizationSetBy = Automatic
+
+	column dateCreated
+		dataType: string
+		lineageTag: 71fdea9e-05f5-4faf-95bb-308603c0863d
+		summarizeBy: none
+		sourceColumn: dateCreated
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastUpdated
+		dataType: string
+		lineageTag: 2afb97cb-a918-4a90-86fa-a4a7cffb845e
+		summarizeBy: none
+		sourceColumn: lastUpdated
+
+		annotation SummarizationSetBy = Automatic
+
+	partition shg_isla = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://azure.saye-ug.heifer.org/gateway/api/v1/odata-feed/view/shg_profiling_form_odata_view", null, [Implementation="2.0"]),
+				    shg_profiling_form_odata_view_table = Source{[Name="shg_profiling_form_odata_view",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(shg_profiling_form_odata_view_table,{"instructions", "Participation_interview", "subcounties_view_refID", "subcounties_view__id", "subcounty_refID", "district_refID", "Grouptype_other"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

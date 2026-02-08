@@ -1,0 +1,440 @@
+table agrihubs_distribution_final
+	lineageTag: b628b3e8-9ab6-46af-a0fd-604eb1769e4e
+
+	column _id
+		dataType: string
+		lineageTag: cee2985c-c4c2-49bb-8a8a-be5918fd53eb
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub
+		dataType: string
+		lineageTag: 8858ed7b-01c6-49fa-b6b2-00f96ebbc54e
+		summarizeBy: none
+		sourceColumn: agrihub
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_id
+		dataType: string
+		lineageTag: f5e59d36-f8e7-484b-a97a-bfe244c50cf3
+		summarizeBy: none
+		sourceColumn: agrihub_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_unit_received
+		dataType: string
+		lineageTag: a9c281ac-aea5-4914-b7a8-fd8fde9f1822
+		summarizeBy: none
+		sourceColumn: agrihub_unit_received
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_qty_received
+		dataType: int64
+		formatString: 0
+		lineageTag: a627b81f-301a-49c2-b3da-be8c612547f6
+		summarizeBy: sum
+		sourceColumn: agrihub_qty_received
+
+		annotation SummarizationSetBy = Automatic
+
+	column __Submissions-id
+		dataType: string
+		lineageTag: 13c853b7-81d7-45bc-b6f2-30dac838af0d
+		summarizeBy: none
+		sourceColumn: __Submissions-id
+
+		annotation SummarizationSetBy = Automatic
+
+	column dateCreated
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 99c92a31-b047-4b20-a7f2-1735338b5191
+		summarizeBy: none
+		sourceColumn: dateCreated
+
+		variation Variation
+			isDefault
+			relationship: c65c87d7-d0c5-4b34-a14a-2eaee6849f21
+			defaultHierarchy: LocalDateTable_a1fba637-5b02-40b4-98df-1930c773ffce.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastUpdated
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c16ec80c-4b4a-4df0-99b2-34c8df2fdde6
+		summarizeBy: none
+		sourceColumn: lastUpdated
+
+		variation Variation
+			isDefault
+			relationship: 30965fb3-f2c4-4bfa-b5a6-89bd199f7cd0
+			defaultHierarchy: LocalDateTable_e274bbc9-eb62-42e6-b0bb-c9ef491380d3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdBy
+		dataType: string
+		lineageTag: 4d0cf37d-a77d-4994-bbe4-b35acca332c5
+		summarizeBy: none
+		sourceColumn: createdBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		lineageTag: acd5adf8-e526-43a7-a47f-546daed66472
+		summarizeBy: none
+		sourceColumn: docId
+
+		annotation SummarizationSetBy = Automatic
+
+	column partner
+		dataType: string
+		lineageTag: 2e2bdb9a-7445-4f81-b67f-57f5fb7ea089
+		summarizeBy: none
+		sourceColumn: partner
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_name
+		dataType: string
+		lineageTag: bd35ff0b-10e1-4154-880b-513af9ee202f
+		summarizeBy: none
+		sourceColumn: district_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column material_type
+		dataType: string
+		lineageTag: 9d8a0a0a-3168-4b1b-99fd-dcb205a54362
+		summarizeBy: none
+		sourceColumn: material_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit
+		dataType: string
+		lineageTag: 36f210ae-3a19-49b3-b8e0-b3342ed58f5d
+		summarizeBy: none
+		sourceColumn: unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column distribution_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f1d45382-eebe-4004-a8ce-ffe75190750f
+		summarizeBy: none
+		sourceColumn: distribution_date
+
+		variation Variation
+			isDefault
+			relationship: 36ced8e1-0c73-4e02-81e9-64731c0c2b2b
+			defaultHierarchy: LocalDateTable_9881e43e-ad2f-4c8d-9ce2-02876256d81b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column participant_type
+		dataType: string
+		lineageTag: 5f663b27-2282-4064-89d6-615973b5c75d
+		summarizeBy: none
+		sourceColumn: participant_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column supplier
+		dataType: string
+		lineageTag: 3fb008d3-4a89-44d8-a3db-3a7c294890ac
+		summarizeBy: none
+		sourceColumn: supplier
+
+		annotation SummarizationSetBy = Automatic
+
+	column submitterName
+		dataType: string
+		lineageTag: e8932381-ab0c-4989-906c-f62a3a06c526
+		summarizeBy: none
+		sourceColumn: submitterName
+
+		annotation SummarizationSetBy = Automatic
+
+	column submissionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e4d9622d-7c56-42ea-9fdb-87fde6b752a0
+		summarizeBy: none
+		sourceColumn: submissionDate
+
+		variation Variation
+			isDefault
+			relationship: 45d73638-1bd3-46c5-993c-06b5867b4bdb
+			defaultHierarchy: LocalDateTable_f9a0e3e4-5286-49a5-bd2e-26d19759daf3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column agrihub_registration_form_agrihub_id
+		dataType: string
+		lineageTag: c0001bbc-4e42-4943-bfa0-cbaf9692d822
+		summarizeBy: none
+		sourceColumn: agrihub_registration_form_agrihub_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_agrihub_unit_received
+		dataType: string
+		lineageTag: b1f05bdb-8dc2-4ebe-ab31-7fc78ae098ca
+		summarizeBy: none
+		sourceColumn: other_agrihub_unit_received
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.other_material_type'
+		dataType: string
+		lineageTag: 7c8180a3-f972-41ac-93b5-89b0d4d4597f
+		summarizeBy: none
+		sourceColumn: distribution_mainform.other_material_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.livestock_type'
+		dataType: string
+		lineageTag: ed5f093a-2086-4c8d-a89f-425cdefe224d
+		summarizeBy: none
+		sourceColumn: distribution_mainform.livestock_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.other_livestock_type'
+		dataType: string
+		lineageTag: 57169384-ca3e-4d12-a796-13b7254864b8
+		summarizeBy: none
+		sourceColumn: distribution_mainform.other_livestock_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.crop_type'
+		dataType: string
+		lineageTag: 0fc96beb-a391-49d6-8263-b3ef5ea80717
+		summarizeBy: none
+		sourceColumn: distribution_mainform.crop_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.other_crop_type'
+		dataType: string
+		lineageTag: e5eba438-a20e-4ec8-98b1-9b5f0e075247
+		summarizeBy: none
+		sourceColumn: distribution_mainform.other_crop_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.agri_resources_type'
+		dataType: string
+		lineageTag: e28ae83d-20b1-4623-be09-749677406ad2
+		summarizeBy: none
+		sourceColumn: distribution_mainform.agri_resources_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.other_agri_resources_type'
+		dataType: string
+		lineageTag: 00ff9317-dbbe-4abf-8828-7b1086d66f2a
+		summarizeBy: none
+		sourceColumn: distribution_mainform.other_agri_resources_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.isla_kits'
+		dataType: string
+		lineageTag: 54c0ac43-e940-450b-88cc-d6340e65a75e
+		summarizeBy: none
+		sourceColumn: distribution_mainform.isla_kits
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.other_isla_kits'
+		dataType: string
+		lineageTag: 99765744-6058-4a65-86a2-3ca06c6af027
+		summarizeBy: none
+		sourceColumn: distribution_mainform.other_isla_kits
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.unit'
+		dataType: string
+		lineageTag: 3f3fe55f-4e49-4238-ad41-95a8238899e6
+		summarizeBy: none
+		sourceColumn: distribution_mainform.unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_other'
+		dataType: int64
+		formatString: 0
+		lineageTag: e8221fe5-0ccf-49bf-b8d7-4c6e81e5510f
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_other
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_kgs'
+		dataType: double
+		lineageTag: 8d2eb325-43a8-4f59-861c-27835854d453
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_kgs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'distribution_mainform.qty_distributed_grams'
+		dataType: double
+		lineageTag: 623afcb0-b942-4cd2-ba41-de095fc0ffac
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_grams
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'distribution_mainform.qty_distributed_seedlings'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d7eaaee-235c-44ec-8704-85e8bc640b5f
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_seedlings
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_liters'
+		dataType: double
+		lineageTag: b93e3ab3-6313-4d07-bd30-e5a8c5c2399d
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_liters
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'distribution_mainform.qty_distributed_packets'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c65c44d-711b-4038-9fab-659da5ee155a
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_packets
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_dozens'
+		dataType: string
+		lineageTag: 21fe190b-f294-4f16-b57f-c20383c77037
+		summarizeBy: none
+		sourceColumn: distribution_mainform.qty_distributed_dozens
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_sackets'
+		dataType: double
+		lineageTag: 740d7660-facd-4ca0-86fd-56f999c89317
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_sackets
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'distribution_mainform.qty_distributed_tins'
+		dataType: double
+		lineageTag: 682c14a8-c668-4d59-9bd7-d052c6ed1724
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_tins
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'distribution_mainform.qty_distributed_boxes'
+		dataType: string
+		lineageTag: b331ed40-e724-4563-bdb5-75eb359f36f3
+		summarizeBy: none
+		sourceColumn: distribution_mainform.qty_distributed_boxes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_pieces'
+		dataType: int64
+		formatString: 0
+		lineageTag: e3d2ab82-4f92-4de3-b1a0-45ba57f1d4c7
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_pieces
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8093b35f-282f-40cd-a09a-a061a68f7698
+		summarizeBy: sum
+		sourceColumn: distribution_mainform.qty_distributed_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_kit'
+		dataType: string
+		lineageTag: 538c9345-a648-4aaa-9e3c-ad89dda5be13
+		summarizeBy: none
+		sourceColumn: distribution_mainform.qty_distributed_kit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_meters'
+		dataType: string
+		lineageTag: ffff4667-1393-4a50-9064-988fef2b3cae
+		summarizeBy: none
+		sourceColumn: distribution_mainform.qty_distributed_meters
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_hectare'
+		dataType: string
+		lineageTag: 241ee1ec-2fc4-4293-97ac-23f693bc09f8
+		summarizeBy: none
+		sourceColumn: distribution_mainform.qty_distributed_hectare
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_acre'
+		dataType: string
+		lineageTag: 4866d5b5-ffc1-47a0-91d8-3df5b06d1e22
+		summarizeBy: none
+		sourceColumn: distribution_mainform.qty_distributed_acre
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'distribution_mainform.qty_distributed_foot'
+		dataType: string
+		lineageTag: c1c61e98-18a7-4785-a43e-c838acd4ce59
+		summarizeBy: none
+		sourceColumn: distribution_mainform.qty_distributed_foot
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agrihubs_distribution_final = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"agrihubs distribution", {"__Submissions-id"}, distribution_mainform, {"_id"}, "distribution_mainform", JoinKind.LeftOuter),
+				    #"Expanded distribution_mainform" = Table.ExpandTableColumn(Source, "distribution_mainform", {"other_material_type", "livestock_type", "other_livestock_type", "crop_type", "other_crop_type", "agri_resources_type", "other_agri_resources_type", "isla_kits", "other_isla_kits", "unit", "qty_distributed_other", "qty_distributed_kgs", "qty_distributed_grams", "qty_distributed_seedlings", "qty_distributed_liters", "qty_distributed_packets", "qty_distributed_dozens", "qty_distributed_sackets", "qty_distributed_tins", "qty_distributed_boxes", "qty_distributed_pieces", "qty_distributed_number", "qty_distributed_kit", "qty_distributed_meters", "qty_distributed_hectare", "qty_distributed_acre", "qty_distributed_foot"}, {"distribution_mainform.other_material_type", "distribution_mainform.livestock_type", "distribution_mainform.other_livestock_type", "distribution_mainform.crop_type", "distribution_mainform.other_crop_type", "distribution_mainform.agri_resources_type", "distribution_mainform.other_agri_resources_type", "distribution_mainform.isla_kits", "distribution_mainform.other_isla_kits", "distribution_mainform.unit", "distribution_mainform.qty_distributed_other", "distribution_mainform.qty_distributed_kgs", "distribution_mainform.qty_distributed_grams", "distribution_mainform.qty_distributed_seedlings", "distribution_mainform.qty_distributed_liters", "distribution_mainform.qty_distributed_packets", "distribution_mainform.qty_distributed_dozens", "distribution_mainform.qty_distributed_sackets", "distribution_mainform.qty_distributed_tins", "distribution_mainform.qty_distributed_boxes", "distribution_mainform.qty_distributed_pieces", "distribution_mainform.qty_distributed_number", "distribution_mainform.qty_distributed_kit", "distribution_mainform.qty_distributed_meters", "distribution_mainform.qty_distributed_hectare", "distribution_mainform.qty_distributed_acre", "distribution_mainform.qty_distributed_foot"})
+				in
+				    #"Expanded distribution_mainform"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,179 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "4af0bd904d4b06555690",
+  "position": {
+    "x": 31.704951622083097,
+    "y": 175.30973249857712,
+    "z": 0,
+    "height": 520.33420603301079,
+    "width": 1027.6134319863404,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "shg_groups_statistics"
+                    }
+                  },
+                  "Property": "SHG Name"
+                }
+              },
+              "queryRef": "shg_groups_view.SHG Name",
+              "nativeQueryRef": "SHG Name",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "shg_groups_statistics"
+                        }
+                      },
+                      "Property": "Female"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(shg_groups_view.Female)",
+              "nativeQueryRef": "Sum of Female"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "shg_groups_statistics"
+                        }
+                      },
+                      "Property": "Male"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(shg_groups_view.Male)",
+              "nativeQueryRef": "Sum of Male"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "shg_groups_statistics"
+                        }
+                      },
+                      "Property": "Participants Trained"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(shg_groups_view.Participants Trained)",
+              "nativeQueryRef": "Sum of Participants Trained"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "shg_groups_statistics"
+                        }
+                      },
+                      "Property": "Total"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(shg_groups_view.Total)",
+              "nativeQueryRef": "Sum of Total"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "shg_groups_statistics"
+                        }
+                      },
+                      "Property": "subcounty"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(shg_groups_view.subcounty)",
+              "nativeQueryRef": "First subcounty"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "shg_groups_statistics"
+                        }
+                      },
+                      "Property": "PWD"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(shg_groups_profiling.PWD)",
+              "nativeQueryRef": "Sum of PWD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "shg_groups_statistics"
+                      }
+                    },
+                    "Property": "Total"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

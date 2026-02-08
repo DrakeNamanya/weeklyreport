@@ -1,0 +1,229 @@
+table profile
+	lineageTag: 66d6b35f-9f75-4fa1-a3ee-1d4836799459
+
+	measure 'Total Membershipprofile' = DISTINCTCOUNTNOBLANK('profile'[participant_id])
+		formatString: 0
+		lineageTag: e1f68c34-6b08-497e-86f6-e832e41c78c8
+
+	column participant_id
+		dataType: string
+		lineageTag: 70eb5a6a-8d34-4bd3-ac09-f9db265ba19c
+		summarizeBy: none
+		sourceColumn: participant_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column First_name
+		dataType: string
+		lineageTag: 6dfec36a-4958-47f1-856b-66bfcc94f373
+		summarizeBy: none
+		sourceColumn: First_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Surname
+		dataType: string
+		lineageTag: bab169ef-7a20-48f6-a36e-5d3d961258ff
+		summarizeBy: none
+		sourceColumn: Surname
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_name
+		dataType: string
+		lineageTag: 2006e54d-4e16-4092-95bc-c1f1cd43735a
+		summarizeBy: none
+		sourceColumn: district_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcounty_name
+		dataType: string
+		lineageTag: 20e873c3-d1a1-4e33-8282-cb9c31721b5f
+		summarizeBy: none
+		sourceColumn: Subcounty_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Parish_name
+		dataType: string
+		lineageTag: c6dc08a6-dc06-4902-9e28-655ad2621609
+		summarizeBy: none
+		sourceColumn: Parish_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Village_name
+		dataType: string
+		lineageTag: 6c112e64-589c-4afb-b8c7-71efbe441bb6
+		summarizeBy: none
+		sourceColumn: Village_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disability_status
+		dataType: string
+		lineageTag: 95f7b557-b116-4f94-a3ff-cc2b55c9020e
+		summarizeBy: none
+		sourceColumn: Disability_status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cohort
+		dataType: string
+		lineageTag: 778a08f8-0830-4af1-9326-3b852b5fd4bd
+		summarizeBy: none
+		sourceColumn: Cohort
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sex
+		dataType: string
+		lineageTag: de753a83-e8d7-4094-a8e5-f29a8080614c
+		summarizeBy: none
+		sourceColumn: Sex
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column tel_contact
+		dataType: string
+		lineageTag: 1ff22436-7b22-4311-89fe-33b72f88a09c
+		summarizeBy: none
+		sourceColumn: tel_contact
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column name_ip
+		dataType: string
+		lineageTag: 8e9b4c35-fe15-4903-90e9-2a1f757b7f42
+		summarizeBy: none
+		sourceColumn: name_ip
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOB
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 12cd4566-b05f-4b57-94c9-e04b95b13edc
+		summarizeBy: none
+		sourceColumn: DOB
+
+		variation Variation
+			isDefault
+			relationship: af988a3c-4376-4ca3-bd0a-7c407007ae50
+			defaultHierarchy: LocalDateTable_5527be6f-6322-4e40-8b8c-243db5e5fe3a.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column shg_name
+		dataType: string
+		lineageTag: 18ba107e-230b-49be-9896-4406e1ee02ff
+		summarizeBy: none
+		sourceColumn: shg_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_profiling_form_refID
+		dataType: string
+		lineageTag: 52712d83-8894-46bb-989c-22f0a6bdf44e
+		summarizeBy: none
+		sourceColumn: shg_profiling_form_refID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_id
+		dataType: string
+		lineageTag: 199eebae-6c1e-4f45-8346-c9b87de82ab6
+		summarizeBy: none
+		sourceColumn: shg_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		lineageTag: 71245ea2-cf5a-45b7-bf5b-e45a5c8a6a00
+		summarizeBy: none
+		sourceColumn: docId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column dateCreated
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fb36299d-45ef-4ef2-a2ed-a2b8c38c68fa
+		summarizeBy: none
+		sourceColumn: dateCreated
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column deactivation_reason
+		dataType: string
+		lineageTag: f96c94b3-1192-40ed-a055-dd282f70452f
+		summarizeBy: none
+		sourceColumn: deactivation_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	partition profile = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://azure.saye-ug.heifer.org/gateway/api/v1/odata-feed/view/participants_odata_view", null, [Implementation="2.0"]),
+				    participants_odata_view_table = Source{[Name="participants_odata_view",Signature="table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(participants_odata_view_table,{{"DOB", type datetime}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type",{{"DOB", type date}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type1",{"lastUpdated"}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Removed Columns",{{"dateCreated", type datetime}}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Changed Type2",{{"dateCreated", type date}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type3",{"incubation_centers_refID", "incubation_centers__id", "incubation_center_id", "createdBy", "incubation_center"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns1", each ([name_ip] = "HEIFER")),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Filtered Rows",{"sme_name", "mse_group_profiling_tool_refID", "mse_group_profiling_tool__id", "sme_id", "shg_profiling_form__id"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns2",{{"refID", "participant_id"}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Renamed Columns")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

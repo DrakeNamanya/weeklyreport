@@ -1,0 +1,183 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "daa2c9665a14244a0a45",
+  "position": {
+    "x": 20.779220779220779,
+    "y": 103.8961038961039,
+    "z": 1000,
+    "height": 537.66233766233768,
+    "width": 1033.7662337662337,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "all_trainees_view"
+                    }
+                  },
+                  "Property": "data_collector"
+                }
+              },
+              "queryRef": "all_trainees_view.data_collector",
+              "nativeQueryRef": "data_collector",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "PWDs_TrainedY"
+                }
+              },
+              "queryRef": "AttedenceReach.PWDs_TrainedY",
+              "nativeQueryRef": "PWDs_TrainedY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DateTable"
+                    }
+                  },
+                  "Property": "Female_ReachedY"
+                }
+              },
+              "queryRef": "DateTable.Female_ReachedY",
+              "nativeQueryRef": "Female_ReachedY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Youth_Trained_"
+                }
+              },
+              "queryRef": "AttedenceReach.Youth_Trained_",
+              "nativeQueryRef": "Youth_Trained_"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DateTable"
+                    }
+                  },
+                  "Property": "Groups_ReachedY"
+                }
+              },
+              "queryRef": "DateTable.Groups_ReachedY",
+              "nativeQueryRef": "Groups_ReachedY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Training_Types_ListY"
+                }
+              },
+              "queryRef": "AttedenceReach.Training_Types_ListY",
+              "nativeQueryRef": "Training_Types_ListY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations2"
+                    }
+                  },
+                  "Property": "Group_Names_ListY"
+                }
+              },
+              "queryRef": "AttedenceReach.Group_Names_ListY",
+              "nativeQueryRef": "Group_Names_ListY"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "all_trainees_view"
+                        }
+                      },
+                      "Property": "district"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(all_trainees_view.district)",
+              "nativeQueryRef": "First district"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calculations2"
+                  }
+                },
+                "Property": "Youth_Trained_"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a86007e0180b60c5e16e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "youth"
+              }
+            },
+            "Property": "data_collector"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "isLockedInViewMode": true
+      }
+    ]
+  }
+}

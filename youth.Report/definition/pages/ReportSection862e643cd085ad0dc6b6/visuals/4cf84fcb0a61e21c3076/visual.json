@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "4cf84fcb0a61e21c3076",
+  "position": {
+    "x": 458.93032721285982,
+    "y": 104.89836050579653,
+    "z": 1000,
+    "height": 46.829625225802026,
+    "width": 365.27107676125581,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "NEW YOUTH REACHED BY MONTH",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#e56e1d"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

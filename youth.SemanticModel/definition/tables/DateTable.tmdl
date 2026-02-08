@@ -1,0 +1,443 @@
+table DateTable
+	lineageTag: 4bfe1bc8-b28c-47a8-927b-7092cff68262
+	dataCategory: Time
+
+	measure Group_Names_List = ```
+			    IF(
+			        HASONEVALUE(all_trainees_view[data_collector]),
+			        LEFT(
+			            CONCATENATEX(
+			                VALUES(all_trainees_view[group_name]),
+			                all_trainees_view[group_name],
+			                ", ",
+			                all_trainees_view[group_name],
+			                ASC
+			            ),
+			            100
+			        ) & "..."
+			    )
+			```
+		lineageTag: 6d59df62-7d1f-4288-bd46-027f3092435d
+
+	measure Training_Types_List =
+			IF(
+			        HASONEVALUE(all_trainees_view[data_collector]),
+			        CONCATENATEX(
+			            VALUES(all_trainees_view[training_type]),
+			            all_trainees_view[training_type],
+			            ", ",
+			            all_trainees_view[training_type],
+			            ASC
+			        ),
+			        BLANK()
+			    )
+		lineageTag: e55043f2-4640-4753-bf12-0e6e7a0d2f99
+
+	measure Last_Updated_Date = ```
+			TODAY()
+			
+			```
+		formatString: General Date
+		lineageTag: dddc31e9-c5d8-408b-8f04-7cab20935b26
+
+	measure SHGs_Profiled = ```
+			
+			DISTINCTCOUNT(profile[shg_id])
+			
+			```
+		formatString: 0
+		lineageTag: b68a5cfe-0c6b-427a-943e-179aff92cfaf
+
+	measure Females_Profiled = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(profile[participant_id]),
+			    profile[sex] = "Female"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 316ccc9c-fc10-4a5b-b7f6-7fb6b41992ba
+
+	measure Males_Profiled = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(profile[participant_id]),
+			    profile[sex] = "Male"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 03193467-5bb9-4fd1-8580-617c9c9c5fd2
+
+	measure PWDs_Profiled = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(profile[participant_id]),
+			    profile[disability_status] = "Yes"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 1b45e327-261d-4641-86f1-90d2a73e298b
+
+	measure Youth_Profiled = ```
+			
+			DISTINCTCOUNT(profile[participant_id])
+			
+			```
+		formatString: 0
+		lineageTag: 3c8b0302-02ea-43fd-8098-5cc98eac9358
+
+	measure New_Total_Reach = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(
+			        all_trainees_view,
+			        all_trainees_view[activity_date] = 
+			        CALCULATE(
+			            MIN(all_trainees_view[activity_date]),
+			            ALLEXCEPT(all_trainees_view, all_trainees_view[participant_id])
+			        )
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 4437ee31-10e4-4679-9be4-15d828f8cf4c
+
+	measure New_Female_Reach = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(
+			        all_trainees_view,
+			        all_trainees_view[activity_date] = 
+			        CALCULATE(MIN(all_trainees_view[activity_date]), ALLEXCEPT(all_trainees_view, all_trainees_view[participant_id])) &&
+			        all_trainees_view[sex] = "Female"
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: b3553dde-75a4-4240-adcf-1cc5cdd3e6e1
+
+	measure New_PWDs_Reach = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(
+			        all_trainees_view,
+			        all_trainees_view[activity_date] = 
+			        CALCULATE(MIN(all_trainees_view[activity_date]), ALLEXCEPT(all_trainees_view, all_trainees_view[participant_id])) &&
+			        all_trainees_view[Disability_status] = "Yes"
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 166bc833-4693-4077-aef1-0748100a7450
+
+	measure New_Female_PWDs_Reach = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(
+			        all_trainees_view,
+			        all_trainees_view[activity_date] = 
+			        CALCULATE(MIN(all_trainees_view[activity_date]), ALLEXCEPT(all_trainees_view, all_trainees_view[participant_id])) &&
+			        all_trainees_view[Disability_status] = "Yes" &&
+			        all_trainees_view[sex] = "Female"
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: cf308752-bda4-46ec-8d1c-1288d90ef067
+
+	measure New_Youth_in_Work = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(
+			        all_trainees_view,
+			        all_trainees_view[activity_date] = 
+			        CALCULATE(MIN(all_trainees_view[activity_date]), ALLEXCEPT(all_trainees_view, all_trainees_view[participant_id])) &&
+			        all_trainees_view[Do_for_living] = "Farming"
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 10bd62f5-f658-4726-aa7f-20aeaa7b5e3f
+
+	measure New_Female_Youth_in_Work = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(
+			        all_trainees_view,
+			        all_trainees_view[activity_date] = 
+			        CALCULATE(MIN(all_trainees_view[activity_date]), ALLEXCEPT(all_trainees_view, all_trainees_view[participant_id])) &&
+			        all_trainees_view[Do_for_living] = "Farming" &&
+			        all_trainees_view[sex] = "Female"
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 470bcddc-3499-430f-8f85-cbc05d919df5
+
+	measure New_PWDs_in_Work = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(
+			        all_trainees_view,
+			        all_trainees_view[activity_date] = 
+			        CALCULATE(MIN(all_trainees_view[activity_date]), ALLEXCEPT(all_trainees_view, all_trainees_view[participant_id])) &&
+			        all_trainees_view[Do_for_living] = "Farming" &&
+			        all_trainees_view[Disability_status] = "Yes"
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 3e381197-6856-45c2-97f9-6a93252e7573
+
+	measure New_Female_PWDs_in_Work = ```
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[participant_id]),
+			    FILTER(
+			        all_trainees_view,
+			        all_trainees_view[activity_date] = 
+			        CALCULATE(MIN(all_trainees_view[activity_date]), ALLEXCEPT(all_trainees_view, all_trainees_view[participant_id])) &&
+			        all_trainees_view[Do_for_living] = "Farming" &&
+			        all_trainees_view[Disability_status] = "Yes" &&
+			        all_trainees_view[sex] = "Female"
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 5b19dbe3-2450-436c-9989-d7cd3ba3023b
+
+	measure New_Reach_MoM_Change = ```
+			
+			VAR CurrentMonthValue = [New_Total_Reach]
+			VAR PreviousMonthValue =
+			    CALCULATE(
+			        [New_Total_Reach],
+			        DATEADD(DateTable[Date], -1, MONTH)
+			    )
+			RETURN
+			IF(
+			    NOT ISBLANK(PreviousMonthValue),
+			    DIVIDE(CurrentMonthValue - PreviousMonthValue, PreviousMonthValue),
+			    BLANK()
+			)
+			
+			```
+		lineageTag: 2dafdf8f-a12d-4e4b-b612-3acd74e232a5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Reach_Trend_Arrow = ```
+			
+			VAR Change = [New_Reach_MoM_Change]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Change), "",
+			    Change > 0, "🟢 ↑",
+			    Change < 0, "🔴 ↓",
+			    "➖"
+			)
+			
+			```
+		lineageTag: e7e4c1e4-8627-422c-832a-58b7af36daa4
+
+	measure Previous_Month_Change =
+			VAR Change = [New_Reach_MoM_Change]
+			VAR Pct = FORMAT(Change, "0.0%")
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Change), "",
+			    Change > 0, "🟢 ↑ " & Pct,   -- Green up arrow
+			    Change < 0, "🔴 ↓ " & Pct,   -- Red down arrow
+			    "➖ " & Pct                  -- No change
+			)
+		lineageTag: e3cff673-dd2d-4d9c-9780-dafc41c7a18a
+
+	measure FirstAppearance = ```
+			
+			CALCULATE(
+			    MIN(profile[dateCreated]),
+			    ALLEXCEPT(profile, profile[shg_id])
+			)
+			
+			```
+		formatString: General Date
+		lineageTag: d3639d7e-f433-4be3-aa48-17b8bb1e10a8
+
+	measure SHGs_Profiled_First_Month = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(profile[shg_id]),
+			    FILTER(
+			        profile,
+			        FORMAT(profile[dateCreated], "YYYY-MM") = 
+			        CALCULATE(
+			            FORMAT(MIN(profile[dateCreated]), "YYYY-MM"),
+			            ALLEXCEPT(profile, profile[shg_id])
+			        )
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 4ed33eaa-b4ee-4d8d-8752-b58bd498ae29
+
+	measure Female_ReachedY = ```
+			
+			CALCULATE(
+			    COUNTROWS(all_trainees_view),
+			    all_trainees_view[sex] = "Female"
+			)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 6799c36f-dc19-47af-a36c-b426c1ab77d5
+
+	measure Groups_ReachedY = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(all_trainees_view[group_id])
+			)
+			
+			```
+		formatString: 0
+		lineageTag: defe3481-56f2-474a-a71e-c357dd655ace
+
+	measure Selected_Months = ```
+			
+			DISTINCTCOUNT (
+			    YEAR ( DateTable[Date] ) * 100
+			        + MONTH ( DateTable[Date] )
+			)
+			
+			```
+		lineageTag: a49d62c7-9400-4d6d-9182-05b181ea0726
+
+	column Date
+		isKey
+		formatString: yyyy-mm
+		lineageTag: de460a29-b5da-419c-a330-e6af1ffb9d2c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Year
+		formatString: 0
+		lineageTag: 4db23442-9289-4ddc-a7a9-a489c4c4b3be
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: d8294c5c-c795-48ca-b56e-0e554d56f92e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		lineageTag: fab34da9-cef4-40e8-b9c6-74002436d702
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Name]
+		sortByColumn: 'Month Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year'
+		lineageTag: cf565d24-a3fc-4604-bea7-97f9807d792a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: b6135174-1cd0-4842-b719-19a962e41d02
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		formatString: 0
+		lineageTag: 88ae02b4-e114-4797-99f5-479a59ff31f5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		lineageTag: f2324244-ec20-4f8c-b55e-de0246c7d156
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Year Hierarchy'
+		lineageTag: d4e5a7aa-ecdd-43d7-9215-6b746f878833
+
+		level Year
+			lineageTag: d7514bb3-b997-4ae9-a6a8-adc8e77a86f9
+			column: Year
+
+		level Quarter
+			lineageTag: e7ed3563-54b7-4316-9bf6-70b47ecb674b
+			column: Quarter
+
+		level 'Month Year'
+			lineageTag: a84bbc8a-0078-4314-b29e-1181109a4598
+			column: 'Month Year'
+
+	partition DateTable = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS(
+				    CALENDAR(
+				        MIN(all_trainees_view[activity_date]),
+				        MAX(all_trainees_view[activity_date])
+				    ),
+				    "Year", YEAR([Date]),
+				    "Month Number", MONTH([Date]),
+				    "Month Name", FORMAT([Date], "MMMM"),
+				    "Month Year", FORMAT([Date], "MMM YYYY"),
+				    "Quarter", "Q" & FORMAT([Date], "Q"),
+				    "Day", DAY([Date]),
+				    "Weekday", FORMAT([Date], "dddd")
+				)
+				
+				```
+
+	annotation PBI_Id = 4a0115a86cd94f3089443bb139d36486
+

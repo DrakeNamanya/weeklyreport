@@ -1,0 +1,308 @@
+table 'shg_group distribution'
+	isHidden
+	lineageTag: 446fc4b9-8bdc-4fc3-b5fb-53d70a7e10b8
+
+	column _id
+		dataType: string
+		isHidden
+		lineageTag: b85b85eb-14f1-4bed-962f-f3f83410da88
+		summarizeBy: none
+		sourceColumn: _id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_name
+		dataType: string
+		isHidden
+		lineageTag: 15ddb7c8-1810-4b84-ad33-54bd9abd4036
+		summarizeBy: none
+		sourceColumn: shg_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_id
+		dataType: string
+		isHidden
+		lineageTag: 0dfcccbc-1831-4305-8bf3-bced435118b0
+		summarizeBy: none
+		sourceColumn: shg_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_group_unit_received
+		dataType: string
+		isHidden
+		lineageTag: 18c081b1-5c44-4c32-a1ea-e9e853a7f6a0
+		summarizeBy: none
+		sourceColumn: shg_group_unit_received
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_group_qty_received
+		dataType: double
+		isHidden
+		lineageTag: 3adb787a-8873-48e1-b4f0-14f648920912
+		summarizeBy: sum
+		sourceColumn: shg_group_qty_received
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column __Submissions-id
+		dataType: string
+		isHidden
+		lineageTag: 16accb7b-8be6-4497-90f5-1d9ffe280c95
+		summarizeBy: none
+		sourceColumn: __Submissions-id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column district
+		dataType: string
+		isHidden
+		lineageTag: 30275d59-c8fd-4d68-94f3-df0630ccfb74
+		summarizeBy: none
+		sourceColumn: district
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcounty
+		dataType: string
+		isHidden
+		lineageTag: 18e9b7cf-1d67-482c-af83-0468bbe0c06a
+		summarizeBy: none
+		sourceColumn: subcounty
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column dateCreated
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 7f0333af-1a08-42dd-8857-6b29edd0acf9
+		summarizeBy: none
+		sourceColumn: dateCreated
+
+		variation Variation
+			isDefault
+			relationship: 4b3ed033-072f-4243-b568-ab786742f384
+			defaultHierarchy: LocalDateTable_e44bb127-fa78-4e63-923c-e4fce108c401.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastUpdated
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: deac3a11-939f-4971-a63a-b80d9b861738
+		summarizeBy: none
+		sourceColumn: lastUpdated
+
+		variation Variation
+			isDefault
+			relationship: f0f23e18-968c-4a44-850a-84dc207abbf4
+			defaultHierarchy: LocalDateTable_84bf2d1e-436c-4321-a707-dba33f50c859.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdBy
+		dataType: string
+		isHidden
+		lineageTag: 39a54682-3fdd-4829-b2ef-5d6d85530e24
+		summarizeBy: none
+		sourceColumn: createdBy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shgs_view_shg_id
+		dataType: string
+		isHidden
+		lineageTag: 40935d93-2584-43b8-9330-d4c0dd07f410
+		summarizeBy: none
+		sourceColumn: shgs_view_shg_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column docId
+		dataType: string
+		isHidden
+		lineageTag: b533849d-76de-4e4f-9b20-31c7f5c9384e
+		summarizeBy: none
+		sourceColumn: docId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column partner
+		dataType: string
+		isHidden
+		lineageTag: ed08d11d-b777-467e-9465-45926f5cef58
+		summarizeBy: none
+		sourceColumn: partner
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_name
+		dataType: string
+		isHidden
+		lineageTag: 5ce0f9b3-7fc7-4090-9145-6ecaa768db24
+		summarizeBy: none
+		sourceColumn: district_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column material_type
+		dataType: string
+		isHidden
+		lineageTag: e12cabc9-57e9-4d8a-99e6-73e6f2f77b1b
+		summarizeBy: none
+		sourceColumn: material_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit
+		dataType: string
+		isHidden
+		lineageTag: 8ae092a8-dbba-4a40-94ad-1184884a2b36
+		summarizeBy: none
+		sourceColumn: unit
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column distribution_date
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 3f1767ab-33a4-4b85-8593-22b2d1e4f84e
+		summarizeBy: none
+		sourceColumn: distribution_date
+
+		variation Variation
+			isDefault
+			relationship: 632a3238-cabe-4c81-8af2-2a946ed8aa41
+			defaultHierarchy: LocalDateTable_de461c8f-ab6a-40a3-8abb-148e0df3de11.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column participant_type
+		dataType: string
+		isHidden
+		lineageTag: 86679932-8ff7-41de-916e-248bdbf172ad
+		summarizeBy: none
+		sourceColumn: participant_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column supplier
+		dataType: string
+		isHidden
+		lineageTag: 4f243684-358b-4a2a-9135-1e0c3873df78
+		summarizeBy: none
+		sourceColumn: supplier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column submitterName
+		dataType: string
+		isHidden
+		lineageTag: abe9af8e-7f8c-4911-a49c-2a8272c56ef7
+		summarizeBy: none
+		sourceColumn: submitterName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column submissionDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 06a3c906-e100-443a-8253-a57ef3f2e5bc
+		summarizeBy: none
+		sourceColumn: submissionDate
+
+		variation Variation
+			isDefault
+			relationship: 4803ca9e-ec4e-47b7-89bd-de170bb7c1df
+			defaultHierarchy: LocalDateTable_05c49ae3-3924-49f5-9ff2-5324fa67ad79.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_shg_group_unit_received
+		dataType: string
+		isHidden
+		lineageTag: 1ae18734-f19f-4c18-94bf-c79fd7aba91b
+		summarizeBy: none
+		sourceColumn: other_shg_group_unit_received
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column shg_profiling_form_shg_id
+		dataType: string
+		isHidden
+		lineageTag: 903eb1e9-73e4-4c0f-a281-789c2ea1bc76
+		summarizeBy: none
+		sourceColumn: shg_profiling_form_shg_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'shg_group distribution' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Personal\DATA COLLECTORS LTD\Customer\sayekatale\Downloads\distributions\shg_group.csv"),[Delimiter=",", Columns=24, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"_id", type text}, {"shg_name", type text}, {"shg_id", type text}, {"shg_group_unit_received", type text}, {"shg_group_qty_received", type number}, {"__Submissions-id", type text}, {"district", type text}, {"subcounty", type text}, {"dateCreated", type datetime}, {"lastUpdated", type datetime}, {"createdBy", type text}, {"shgs_view_shg_id", type text}, {"docId", type text}, {"partner", type text}, {"district_name", type text}, {"material_type", type text}, {"unit", type text}, {"distribution_date", type datetime}, {"participant_type", type text}, {"supplier", type text}, {"submitterName", type text}, {"submissionDate", type datetime}, {"other_shg_group_unit_received", type text}, {"shg_profiling_form_shg_id", type text}})
+				in
+				    #"Changed Type"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
