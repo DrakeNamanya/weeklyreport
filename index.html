@@ -44,7 +44,7 @@
 
         .main-layout {
             display: grid;
-            grid-template-columns: 1fr 320px;
+            grid-template-columns: 1fr 340px;
             gap: 20px;
         }
 
@@ -72,37 +72,37 @@
         }
 
         .note-box h4 {
-            margin: 0 0 8px 0;
+            margin: 0 0 10px 0;
             color: #2c3e50;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        /* App Download Styling */
-        .download-btn {
-            display: block;
-            padding: 14px;
-            background: var(--heifer-green);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
+        /* App Download Button Styling */
+        .apk-download-btn {
+            display: inline-block; 
+            padding: 14px 20px; 
+            background: var(--heifer-green); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; 
             font-weight: 600;
             text-align: center;
-            transition: transform 0.2s, background 0.2s;
-            margin-bottom: 10px;
+            transition: opacity 0.2s;
+            width: calc(100% - 40px); /* Adjusting for padding */
         }
 
-        .download-btn:hover {
-            background: #018f55;
-            transform: translateY(-2px);
+        .apk-download-btn:hover {
+            opacity: 0.9;
         }
 
         .download-stats {
-            font-size: 0.8rem;
-            color: #666;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #444;
+            font-weight: bold;
             text-align: center;
-            font-style: italic;
         }
 
         .badge {
@@ -111,12 +111,10 @@
             padding: 2px 8px;
             border-radius: 4px;
             font-size: 0.75rem;
-            font-weight: bold;
         }
 
         @media (max-width: 1024px) {
             .main-layout { grid-template-columns: 1fr; }
-            .notes-sidebar { flex-direction: column; }
         }
     </style>
 </head>
@@ -143,49 +141,48 @@
 
         <aside class="notes-sidebar">
             <div class="note-box" style="border-left-color: var(--heifer-green);">
-                <h4>📱 Mobile Access</h4>
-                <a href="https://www.genspark.ai/api/files/s/t6BCpraf" 
-                   download="SAYEkataleapp-v1.0.0.apk" 
-                   class="download-btn"
-                   id="downloadLink">
-                    Download SAYE KATALE App
+                <h4>SAYE KATALE App</h4>
+                <a href="https://www.genspark.ai/api/code_sandbox/download_file_stream?project_id=18d86fc3-3171-4130-b3bc-9e7fb6eb6436&file_path=%2Fhome%2Fuser%2Fflutter_app%2Fbuild%2Fapp%2Foutputs%2Fapk%2Frelease%2Fapp-release.apk&file_name=SAYEkataleapp-v1.0.0.apk"
+                   id="downloadBtn"
+                   class="apk-download-btn">
+                   📱 Download SAYEkataleapp for Android
                 </a>
                 <div class="download-stats">
-                    Total Downloads: <span id="downloadCount">0</span>
+                    Total App Downloads: <span id="downloadCount">0</span>
                 </div>
             </div>
 
             <div class="note-box">
                 <h4>🔐 Access Note</h4>
                 <p>Please <strong>sign in</strong> with your Heifer Account.</p>
-                <p><small>PSAs/Partners: Request access via M&E Staff.</small></p>
+                <p><small>PSAs/Partners: Contact M&E Staff for access.</small></p>
             </div>
 
             <div class="note-box">
                 <h4>📅 Update Info</h4>
-                <p>Check the <strong>Date Filter</strong> in the report for last update.</p>
+                <p>Check the <strong>Date Filter</strong> for the last refresh status.</p>
             </div>
             
             <div class="note-box" style="border-left-color: #2c3e50;">
                 <p>Support: <span class="badge">Active</span></p>
-                <p><small>Optimized for Desktop view.</small></p>
+                <p><small>Optimized for Desktop browser view.</small></p>
             </div>
         </aside>
     </div>
 
     <script>
-        // Simple Download Counter Logic
-        const downloadLink = document.getElementById('downloadLink');
-        const countDisplay = document.getElementById('downloadCount');
+        // Track download counts in local browser storage
+        const btn = document.getElementById('downloadBtn');
+        const display = document.getElementById('downloadCount');
 
-        // Initialize count from LocalStorage or start at 0
-        let count = localStorage.getItem('saye_download_count') || 0;
-        countDisplay.innerText = count;
+        // Load existing count or start at 0
+        let currentCount = localStorage.getItem('saye_apk_downloads') || 0;
+        display.innerText = currentCount;
 
-        downloadLink.addEventListener('click', () => {
-            count++;
-            localStorage.setItem('saye_download_count', count);
-            countDisplay.innerText = count;
+        btn.addEventListener('click', () => {
+            currentCount++;
+            localStorage.setItem('saye_apk_downloads', currentCount);
+            display.innerText = currentCount;
         });
     </script>
 </body>
