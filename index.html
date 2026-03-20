@@ -10,6 +10,7 @@
             --light-blue: #94c8f3;
             --heifer-green: #01AC66;
             --dark-navy: #2c3e50;
+            --warning-orange: #f39c12;
         }
 
         body {
@@ -52,7 +53,7 @@
             padding: 10px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            height: 750px;
+            height: 800px;
         }
 
         .notes-sidebar {
@@ -63,13 +64,12 @@
 
         .note-box {
             background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
+            padding: 15px;
             border-radius: 12px;
             border-left: 5px solid var(--primary-blue);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        /* App Section */
         .apk-download-btn {
             display: block; 
             padding: 14px; 
@@ -79,45 +79,60 @@
             border-radius: 8px; 
             font-weight: 600;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+        }
+
+        /* Installation Guide Styling */
+        .guide-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .step-num {
+            background: var(--dark-navy);
+            color: white;
+            min-width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            margin-top: 2px;
         }
 
         .share-container {
-            margin-top: 15px;
-            padding: 12px;
+            margin-top: 10px;
+            padding: 10px;
             background: #f0f4f7;
             border-radius: 8px;
             border: 1px dashed #ccc;
         }
 
-        .share-label {
-            font-size: 0.7rem;
-            color: #555;
-            font-weight: bold;
-            margin-bottom: 8px;
-            display: block;
-            text-transform: uppercase;
-        }
-
         .copy-group {
             display: flex;
             gap: 5px;
+            margin-top: 5px;
         }
 
         #displayLink {
             flex: 1;
-            padding: 8px;
-            font-size: 0.75rem;
+            padding: 6px;
+            font-size: 0.7rem;
             border: 1px solid #ccc;
             border-radius: 4px;
             background: white;
             color: var(--heifer-green);
-            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .copy-btn {
-            padding: 6px 12px;
-            font-size: 0.75rem;
+            padding: 4px 10px;
+            font-size: 0.7rem;
             background: var(--dark-navy);
             color: white;
             border: none;
@@ -145,47 +160,63 @@
 
         <aside class="notes-sidebar">
             <div class="note-box" style="border-left-color: var(--heifer-green);">
-                <h4>📱 SAYE KATALE App</h4>
+                <h4 style="margin-top:0">📱 SAYE KATALE App</h4>
                 
-                <a href="https://drive.google.com/file/d/1nXO2U15OZZyE9uoOi6fo_shOrEmDglHp/view?usp=sharing" 
-                   target="_blank"
-                   id="downloadBtn" 
-                   class="apk-download-btn">
-                   📱 Download from Drive
-                </a>
+                <a href="#" id="downloadBtn" class="apk-download-btn">🚀 Instant Download</a>
                 
-                <div style="text-align: center; font-size: 0.8rem; margin-bottom: 10px;">
+                <div style="text-align: center; font-size: 0.75rem; margin-bottom: 12px;">
                     Downloads: <span id="downloadCount" style="font-weight:bold;">0</span>
                 </div>
 
+                <div style="background: #fff9e6; padding: 10px; border-radius: 8px; border: 1px solid #ffeeba;">
+                    <strong style="font-size: 0.75rem; color: var(--warning-orange);">How to Install:</strong>
+                    <div class="guide-step">
+                        <span class="step-num">1</span>
+                        <span>Click <b>Download anyway</b> if Android warns about the file.</span>
+                    </div>
+                    <div class="guide-step">
+                        <span class="step-num">2</span>
+                        <span>Open the file and select <b>Install</b>.</span>
+                    </div>
+                    <div class="guide-step">
+                        <span class="step-num">3</span>
+                        <span>If blocked, go to <b>Settings</b> &rarr; <b>Allow from this source</b>.</span>
+                    </div>
+                </div>
+
                 <div class="share-container">
-                    <span class="share-label">Share Download Link:</span>
+                    <span style="font-size: 0.7rem; color: #666;">Share Direct Link:</span>
                     <div class="copy-group">
-                        <div id="displayLink">SAYE-KATALE-App.link</div>
+                        <div id="displayLink">SAYE-KATALE.apk</div>
                         <button class="copy-btn" onclick="copyDriveLink()">Copy</button>
                     </div>
                 </div>
             </div>
 
             <div class="note-box">
-                <h4>🔐 Access</h4>
-                <p><small>Sign in with Heifer Account. PSAs/Partners contact M&E for access.</small></p>
+                <h4 style="margin-top:0">🔐 Access</h4>
+                <p><small>Sign in with Heifer Account. Request M&E access if needed.</small></p>
             </div>
 
             <div class="note-box">
-                <h4>📅 Update Info</h4>
-                <p><small>Check the report date filter for last refresh.</small></p>
+                <h4 style="margin-top:0">📅 Update</h4>
+                <p><small>Check the <b>Date Filter</b> for last refresh.</small></p>
             </div>
         </aside>
     </div>
 
     <script>
-        // Use your provided Google Drive URL [cite: 1]
-        const driveUrl = "https://drive.google.com/file/d/1nXO2U15OZZyE9uoOi6fo_shOrEmDglHp/view?usp=sharing";
+        // The Direct Download Link (skips preview page)
+        const fileId = "1nXO2U15OZZyE9uoOi6fo_shOrEmDglHp";
+        const directDriveUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
-        // Download Counter
         const btn = document.getElementById('downloadBtn');
         const display = document.getElementById('downloadCount');
+        
+        // Setup Button
+        btn.href = directDriveUrl;
+
+        // Counter Logic
         let count = localStorage.getItem('saye_drive_downloads') || 0;
         display.innerText = count;
 
@@ -197,7 +228,7 @@
 
         // Copy Logic
         function copyDriveLink() {
-            navigator.clipboard.writeText(driveUrl).then(() => {
+            navigator.clipboard.writeText(directDriveUrl).then(() => {
                 const copyBtn = document.querySelector('.copy-btn');
                 copyBtn.innerText = 'Copied!';
                 setTimeout(() => { copyBtn.innerText = 'Copy'; }, 2000);
