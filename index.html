@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLUSTER PERFORMANCE DASHBOARD</title>
+    <title>SAYE KATALE DASHBOARD</title>
     <style>
         :root {
             --primary-blue: #71a3c1;
             --light-blue: #94c8f3;
             --heifer-green: #01AC66;
-            --white: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 20px;
             background: linear-gradient(to right, var(--primary-blue) 0%, var(--light-blue) 100%);
@@ -32,14 +31,13 @@
             margin-bottom: 20px;
         }
 
-        .logo { height: 50px; width: auto; }
+        .logo { height: 45px; }
 
         .title {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: #2c3e50;
-            letter-spacing: 1px;
         }
 
         .main-layout {
@@ -68,50 +66,62 @@
             border-radius: 12px;
             border-left: 5px solid var(--primary-blue);
             font-size: 0.9rem;
-            line-height: 1.5;
         }
 
-        .note-box h4 {
-            margin: 0 0 10px 0;
-            color: #2c3e50;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* App Download Button Styling */
+        /* App Section Styling */
         .apk-download-btn {
-            display: inline-block; 
-            padding: 14px 20px; 
+            display: block; 
+            padding: 14px; 
             background: var(--heifer-green); 
             color: white; 
             text-decoration: none; 
             border-radius: 8px; 
             font-weight: 600;
             text-align: center;
-            transition: opacity 0.2s;
-            width: calc(100% - 40px); /* Adjusting for padding */
+            margin-bottom: 10px;
         }
 
-        .apk-download-btn:hover {
-            opacity: 0.9;
+        .share-container {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
         }
 
-        .download-stats {
-            margin-top: 10px;
-            font-size: 0.85rem;
-            color: #444;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .badge {
-            background: var(--primary-blue);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
+        .share-label {
             font-size: 0.75rem;
+            color: #666;
+            margin-bottom: 5px;
+            display: block;
         }
+
+        .copy-group {
+            display: flex;
+            gap: 5px;
+        }
+
+        #shareUrl {
+            flex: 1;
+            padding: 6px;
+            font-size: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #f9f9f9;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .copy-btn {
+            padding: 6px 10px;
+            font-size: 0.75rem;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .copy-btn:active { background: #1a252f; }
 
         @media (max-width: 1024px) {
             .main-layout { grid-template-columns: 1fr; }
@@ -121,69 +131,73 @@
 <body>
 
     <header class="header">
-        <img src="https://via.placeholder.com/150x50/ffffff/71a3c1?text=LogoBuilder" alt="Logo" class="logo">
+        <img src="https://via.placeholder.com/150x50/ffffff/71a3c1?text=Logo" alt="Logo" class="logo">
         <div class="title">CLUSTER PERFORMANCE DASHBOARD</div>
-        <img src="https://via.placeholder.com/150x50/ffffff/71a3c1?text=Heifer+Logo" alt="Heifer" class="logo">
+        <img src="https://via.placeholder.com/150x50/ffffff/71a3c1?text=Heifer" alt="Heifer" class="logo">
     </header>
 
     <div class="main-layout">
         <section class="dashboard-card">
-            <iframe 
-                title="cluster-performance" 
-                width="100%" 
-                height="100%" 
-                src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&ctid=da6a69e3-3bcd-4f44-a340-aead0cfda08f" 
-                frameborder="0" 
-                allowFullScreen="true"
-                style="border-radius: 8px;">
-            </iframe>
+            <iframe title="cluster-performance" width="100%" height="100%" src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&ctid=da6a69e3-3bcd-4f44-a340-aead0cfda08f" frameborder="0" allowFullScreen="true"></iframe>
         </section>
 
         <aside class="notes-sidebar">
             <div class="note-box" style="border-left-color: var(--heifer-green);">
-                <h4>SAYE KATALE App</h4>
+                <h4>📱 SAYE KATALE App</h4>
                 <a href="https://www.genspark.ai/api/code_sandbox/download_file_stream?project_id=18d86fc3-3171-4130-b3bc-9e7fb6eb6436&file_path=%2Fhome%2Fuser%2Fflutter_app%2Fbuild%2Fapp%2Foutputs%2Fapk%2Frelease%2Fapp-release.apk&file_name=SAYEkataleapp-v1.0.0.apk"
-                   id="downloadBtn"
-                   class="apk-download-btn">
-                   📱 Download SAYEkataleapp for Android
+                   id="downloadBtn" class="apk-download-btn">
+                   Download APK for Android
                 </a>
-                <div class="download-stats">
-                    Total App Downloads: <span id="downloadCount">0</span>
+                <div style="text-align: center; font-size: 0.8rem;">
+                    Downloads: <span id="downloadCount" style="font-weight:bold;">0</span>
+                </div>
+
+                <div class="share-container">
+                    <span class="share-label">Share this page with friends:</span>
+                    <div class="copy-group">
+                        <div id="shareUrl"></div>
+                        <button class="copy-btn" onclick="copyLink()">Copy</button>
+                    </div>
                 </div>
             </div>
 
             <div class="note-box">
-                <h4>🔐 Access Note</h4>
-                <p>Please <strong>sign in</strong> with your Heifer Account.</p>
-                <p><small>PSAs/Partners: Contact M&E Staff for access.</small></p>
+                <h4>🔐 Access</h4>
+                <p><small>Sign in with your Heifer Account. PSAs/Partners contact M&E Staff for permissions.</small></p>
             </div>
 
             <div class="note-box">
                 <h4>📅 Update Info</h4>
-                <p>Check the <strong>Date Filter</strong> for the last refresh status.</p>
-            </div>
-            
-            <div class="note-box" style="border-left-color: #2c3e50;">
-                <p>Support: <span class="badge">Active</span></p>
-                <p><small>Optimized for Desktop browser view.</small></p>
+                <p><small>Check the <strong>Date Filter</strong> for the latest data refresh.</small></p>
             </div>
         </aside>
     </div>
 
     <script>
-        // Track download counts in local browser storage
+        // 1. Download Counter
         const btn = document.getElementById('downloadBtn');
         const display = document.getElementById('downloadCount');
-
-        // Load existing count or start at 0
-        let currentCount = localStorage.getItem('saye_apk_downloads') || 0;
-        display.innerText = currentCount;
+        let count = localStorage.getItem('saye_apk_downloads') || 0;
+        display.innerText = count;
 
         btn.addEventListener('click', () => {
-            currentCount++;
-            localStorage.setItem('saye_apk_downloads', currentCount);
-            display.innerText = currentCount;
+            count++;
+            localStorage.setItem('saye_apk_downloads', count);
+            display.innerText = count;
         });
+
+        // 2. Share Link Logic
+        const shareDisplay = document.getElementById('shareUrl');
+        const currentUrl = window.location.href;
+        shareDisplay.innerText = currentUrl;
+
+        function copyLink() {
+            navigator.clipboard.writeText(currentUrl).then(() => {
+                const copyBtn = document.querySelector('.copy-btn');
+                copyBtn.innerText = 'Copied!';
+                setTimeout(() => { copyBtn.innerText = 'Copy'; }, 2000);
+            });
+        }
     </script>
 </body>
 </html>
