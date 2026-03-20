@@ -9,6 +9,7 @@
             --primary-blue: #71a3c1;
             --light-blue: #94c8f3;
             --heifer-green: #01AC66;
+            --dark-navy: #2c3e50;
         }
 
         body {
@@ -37,7 +38,7 @@
             text-align: center;
             font-size: 1.5rem;
             font-weight: 800;
-            color: #2c3e50;
+            color: var(--dark-navy);
         }
 
         .main-layout {
@@ -68,7 +69,7 @@
             font-size: 0.9rem;
         }
 
-        /* App Section Styling */
+        /* App Section */
         .apk-download-btn {
             display: block; 
             padding: 14px; 
@@ -79,19 +80,26 @@
             font-weight: 600;
             text-align: center;
             margin-bottom: 10px;
+            transition: transform 0.1s;
         }
+
+        .apk-download-btn:active { transform: scale(0.98); }
 
         .share-container {
             margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #ddd;
+            padding: 12px;
+            background: #f0f4f7;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
         }
 
         .share-label {
-            font-size: 0.75rem;
-            color: #666;
-            margin-bottom: 5px;
+            font-size: 0.7rem;
+            color: #555;
+            font-weight: bold;
+            margin-bottom: 8px;
             display: block;
+            text-transform: uppercase;
         }
 
         .copy-group {
@@ -99,29 +107,31 @@
             gap: 5px;
         }
 
-        #shareUrl {
+        #directDownloadUrl {
             flex: 1;
-            padding: 6px;
-            font-size: 0.75rem;
+            padding: 8px;
+            font-size: 0.7rem;
             border: 1px solid #ccc;
             border-radius: 4px;
-            background: #f9f9f9;
+            background: white;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            color: #01AC66;
         }
 
         .copy-btn {
-            padding: 6px 10px;
+            padding: 6px 12px;
             font-size: 0.75rem;
-            background: #2c3e50;
+            background: var(--dark-navy);
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            white-space: nowrap;
         }
 
-        .copy-btn:active { background: #1a252f; }
+        .copy-btn:hover { background: #1a252f; }
 
         @media (max-width: 1024px) {
             .main-layout { grid-template-columns: 1fr; }
@@ -144,37 +154,42 @@
         <aside class="notes-sidebar">
             <div class="note-box" style="border-left-color: var(--heifer-green);">
                 <h4>📱 SAYE KATALE App</h4>
+                
                 <a href="https://www.genspark.ai/api/code_sandbox/download_file_stream?project_id=18d86fc3-3171-4130-b3bc-9e7fb6eb6436&file_path=%2Fhome%2Fuser%2Fflutter_app%2Fbuild%2Fapp%2Foutputs%2Fapk%2Frelease%2Fapp-release.apk&file_name=SAYEkataleapp-v1.0.0.apk"
                    id="downloadBtn" class="apk-download-btn">
-                   Download APK for Android
+                   📱 Download APK Now
                 </a>
-                <div style="text-align: center; font-size: 0.8rem;">
+                
+                <div style="text-align: center; font-size: 0.8rem; margin-bottom: 10px;">
                     Downloads: <span id="downloadCount" style="font-weight:bold;">0</span>
                 </div>
 
                 <div class="share-container">
-                    <span class="share-label">Share this page with friends:</span>
+                    <span class="share-label">Share Download Link:</span>
                     <div class="copy-group">
-                        <div id="shareUrl"></div>
-                        <button class="copy-btn" onclick="copyLink()">Copy</button>
+                        <div id="directDownloadUrl">https://www.genspark.ai/api/code_sandbox/download_file_stream?project_id=18d86fc3-3171-4130-b3bc-9e7fb6eb6436&file_path=%2Fhome%2Fuser%2Fflutter_app%2Fbuild%2Fapp%2Foutputs%2Fapk%2Frelease%2Fapp-release.apk&file_name=SAYEkataleapp-v1.0.0.apk</div>
+                        <button class="copy-btn" onclick="copyDirectLink()">Copy Link</button>
                     </div>
+                    <p style="font-size: 0.65rem; color: #777; margin: 8px 0 0 0;">
+                        * Copy this to send directly via WhatsApp or Email.
+                    </p>
                 </div>
             </div>
 
             <div class="note-box">
                 <h4>🔐 Access</h4>
-                <p><small>Sign in with your Heifer Account. PSAs/Partners contact M&E Staff for permissions.</small></p>
+                <p><small>Sign in with Heifer Account. Request M&E access if needed.</small></p>
             </div>
 
             <div class="note-box">
                 <h4>📅 Update Info</h4>
-                <p><small>Check the <strong>Date Filter</strong> for the latest data refresh.</small></p>
+                <p><small>Check the <strong>Date Filter</strong> for last refresh.</small></p>
             </div>
         </aside>
     </div>
 
     <script>
-        // 1. Download Counter
+        // 1. Download Counter Logic
         const btn = document.getElementById('downloadBtn');
         const display = document.getElementById('downloadCount');
         let count = localStorage.getItem('saye_apk_downloads') || 0;
@@ -186,16 +201,17 @@
             display.innerText = count;
         });
 
-        // 2. Share Link Logic
-        const shareDisplay = document.getElementById('shareUrl');
-        const currentUrl = window.location.href;
-        shareDisplay.innerText = currentUrl;
-
-        function copyLink() {
-            navigator.clipboard.writeText(currentUrl).then(() => {
+        // 2. Direct Download Link Copy Logic
+        function copyDirectLink() {
+            const directLink = document.getElementById('directDownloadUrl').innerText;
+            navigator.clipboard.writeText(directLink).then(() => {
                 const copyBtn = document.querySelector('.copy-btn');
                 copyBtn.innerText = 'Copied!';
-                setTimeout(() => { copyBtn.innerText = 'Copy'; }, 2000);
+                copyBtn.style.background = '#01AC66';
+                setTimeout(() => { 
+                    copyBtn.innerText = 'Copy Link'; 
+                    copyBtn.style.background = '#2c3e50';
+                }, 2000);
             });
         }
     </script>
