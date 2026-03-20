@@ -80,10 +80,7 @@
             font-weight: 600;
             text-align: center;
             margin-bottom: 10px;
-            transition: transform 0.1s;
         }
-
-        .apk-download-btn:active { transform: scale(0.98); }
 
         .share-container {
             margin-top: 15px;
@@ -107,17 +104,15 @@
             gap: 5px;
         }
 
-        #directDownloadUrl {
+        #displayLink {
             flex: 1;
             padding: 8px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             border: 1px solid #ccc;
             border-radius: 4px;
             background: white;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            color: #01AC66;
+            color: var(--heifer-green);
+            font-weight: bold;
         }
 
         .copy-btn {
@@ -128,10 +123,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            white-space: nowrap;
         }
-
-        .copy-btn:hover { background: #1a252f; }
 
         @media (max-width: 1024px) {
             .main-layout { grid-template-columns: 1fr; }
@@ -155,9 +147,11 @@
             <div class="note-box" style="border-left-color: var(--heifer-green);">
                 <h4>📱 SAYE KATALE App</h4>
                 
-                <a href="https://www.genspark.ai/api/code_sandbox/download_file_stream?project_id=18d86fc3-3171-4130-b3bc-9e7fb6eb6436&file_path=%2Fhome%2Fuser%2Fflutter_app%2Fbuild%2Fapp%2Foutputs%2Fapk%2Frelease%2Fapp-release.apk&file_name=SAYEkataleapp-v1.0.0.apk"
-                   id="downloadBtn" class="apk-download-btn">
-                   📱 Download APK Now
+                <a href="https://drive.google.com/file/d/1nXO2U15OZZyE9uoOi6fo_shOrEmDglHp/view?usp=sharing" 
+                   target="_blank"
+                   id="downloadBtn" 
+                   class="apk-download-btn">
+                   📱 Download from Drive
                 </a>
                 
                 <div style="text-align: center; font-size: 0.8rem; margin-bottom: 10px;">
@@ -167,51 +161,46 @@
                 <div class="share-container">
                     <span class="share-label">Share Download Link:</span>
                     <div class="copy-group">
-                        <div id="directDownloadUrl">https://www.genspark.ai/api/code_sandbox/download_file_stream?project_id=18d86fc3-3171-4130-b3bc-9e7fb6eb6436&file_path=%2Fhome%2Fuser%2Fflutter_app%2Fbuild%2Fapp%2Foutputs%2Fapk%2Frelease%2Fapp-release.apk&file_name=SAYEkataleapp-v1.0.0.apk</div>
-                        <button class="copy-btn" onclick="copyDirectLink()">Copy Link</button>
+                        <div id="displayLink">SAYE-KATALE-App.link</div>
+                        <button class="copy-btn" onclick="copyDriveLink()">Copy</button>
                     </div>
-                    <p style="font-size: 0.65rem; color: #777; margin: 8px 0 0 0;">
-                        * Copy this to send directly via WhatsApp or Email.
-                    </p>
                 </div>
             </div>
 
             <div class="note-box">
                 <h4>🔐 Access</h4>
-                <p><small>Sign in with Heifer Account. Request M&E access if needed.</small></p>
+                <p><small>Sign in with Heifer Account. PSAs/Partners contact M&E for access.</small></p>
             </div>
 
             <div class="note-box">
                 <h4>📅 Update Info</h4>
-                <p><small>Check the <strong>Date Filter</strong> for last refresh.</small></p>
+                <p><small>Check the report date filter for last refresh.</small></p>
             </div>
         </aside>
     </div>
 
     <script>
-        // 1. Download Counter Logic
+        // Use your provided Google Drive URL [cite: 1]
+        const driveUrl = "https://drive.google.com/file/d/1nXO2U15OZZyE9uoOi6fo_shOrEmDglHp/view?usp=sharing";
+
+        // Download Counter
         const btn = document.getElementById('downloadBtn');
         const display = document.getElementById('downloadCount');
-        let count = localStorage.getItem('saye_apk_downloads') || 0;
+        let count = localStorage.getItem('saye_drive_downloads') || 0;
         display.innerText = count;
 
         btn.addEventListener('click', () => {
             count++;
-            localStorage.setItem('saye_apk_downloads', count);
+            localStorage.setItem('saye_drive_downloads', count);
             display.innerText = count;
         });
 
-        // 2. Direct Download Link Copy Logic
-        function copyDirectLink() {
-            const directLink = document.getElementById('directDownloadUrl').innerText;
-            navigator.clipboard.writeText(directLink).then(() => {
+        // Copy Logic
+        function copyDriveLink() {
+            navigator.clipboard.writeText(driveUrl).then(() => {
                 const copyBtn = document.querySelector('.copy-btn');
                 copyBtn.innerText = 'Copied!';
-                copyBtn.style.background = '#01AC66';
-                setTimeout(() => { 
-                    copyBtn.innerText = 'Copy Link'; 
-                    copyBtn.style.background = '#2c3e50';
-                }, 2000);
+                setTimeout(() => { copyBtn.innerText = 'Copy'; }, 2000);
             });
         }
     </script>
