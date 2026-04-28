@@ -15,130 +15,84 @@
         body {
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             background: linear-gradient(to right, var(--primary-blue) 0%, var(--light-blue) 100%);
             color: #333;
-            min-height: 100vh;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Prevents body scroll */
         }
 
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 10px 25px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .logo { height: 45px; }
+        .logo { height: 40px; }
+
+        .header-center {
+            text-align: center;
+        }
 
         .title {
-            text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 800;
             color: var(--dark-navy);
+            margin: 0;
         }
 
-        .main-layout {
-            display: grid;
-            grid-template-columns: 1fr 340px;
-            gap: 20px;
-        }
-
-        .dashboard-card {
-            background: white;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            height: 800px;
-        }
-
-        .notes-sidebar {
+        .header-actions {
             display: flex;
-            flex-direction: column;
+            align-items: center;
             gap: 15px;
         }
 
-        .note-box {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary-blue);
-            font-size: 0.85rem;
-        }
-
         .apk-download-btn {
-            display: block; 
-            padding: 14px; 
+            padding: 10px 20px; 
             background: var(--heifer-green); 
             color: white; 
             text-decoration: none; 
-            border-radius: 8px; 
+            border-radius: 6px; 
             font-weight: 600;
-            text-align: center;
-            margin-bottom: 8px;
+            font-size: 0.85rem;
             transition: background 0.2s;
         }
 
         .apk-download-btn:hover { background: #018f55; }
 
-        /* Installation Guide */
-        .guide-box {
-            background: #fff9e6; 
-            padding: 12px; 
-            border-radius: 8px; 
-            border: 1px solid #ffeeba;
-            margin-top: 10px;
-        }
-
-        .step {
-            font-size: 0.75rem;
-            margin-bottom: 5px;
-            display: flex;
-            gap: 8px;
-            color: #555;
-        }
-
-        .share-container {
-            margin-top: 12px;
-            padding: 10px;
+        .info-pill {
             background: #f0f4f7;
-            border-radius: 8px;
-            border: 1px dashed #ccc;
-        }
-
-        .copy-group {
-            display: flex;
-            gap: 5px;
-            margin-top: 5px;
-        }
-
-        #displayLink {
-            flex: 1;
-            padding: 6px;
+            padding: 8px 12px;
+            border-radius: 6px;
             font-size: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            color: var(--dark-navy);
+            border: 1px solid #d1d9e0;
+        }
+
+        .dashboard-container {
+            flex-grow: 1;
             background: white;
-            color: var(--heifer-green);
-            font-weight: bold;
-            overflow: hidden;
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 10px;
         }
 
-        .copy-btn {
-            padding: 4px 12px;
-            font-size: 0.7rem;
-            background: var(--dark-navy);
-            color: white;
+        iframe {
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            border-radius: 8px;
         }
 
-        @media (max-width: 1024px) {
-            .main-layout { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
+            .header { flex-direction: column; gap: 10px; text-align: center; }
+            .header-actions { flex-wrap: wrap; justify-content: center; }
         }
     </style>
 </head>
@@ -146,78 +100,41 @@
 
     <header class="header">
         <img src="https://via.placeholder.com/150x50/ffffff/71a3c1?text=Logo" alt="Logo" class="logo">
-        <div class="title">CLUSTER PERFORMANCE DASHBOARD</div>
-        <img src="https://via.placeholder.com/150x50/ffffff/71a3c1?text=Heifer" alt="Heifer" class="logo">
+        
+        <div class="header-center">
+            <h1 class="title">CLUSTER PERFORMANCE DASHBOARD</h1>
+        </div>
+
+        <div class="header-actions">
+            <div class="info-pill">
+                🔐 <b>Access:</b> Sign in with Heifer ID
+            </div>
+            <a href="https://datcollectors.org/dl" target="_blank" id="downloadBtn" class="apk-download-btn">
+                📱 Download App
+            </a>
+        </div>
     </header>
 
-    <div class="main-layout">
-        <section class="dashboard-card">
-            <iframe title="cluster-performance" width="100%" height="100%" src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&ctid=da6a69e3-3bcd-4f44-a340-aead0cfda08f" frameborder="0" allowFullScreen="true"></iframe>
-        </section>
-
-        <aside class="notes-sidebar">
-            <div class="note-box" style="border-left-color: var(--heifer-green);">
-                <h4 style="margin-top:0">📱 SAYE KATALE App</h4>
-                
-                <a href="https://datcollectors.org/dl" target="_blank" id="downloadBtn" class="apk-download-btn">
-                    🚀 Download App
-                </a>
-                
-                <div style="text-align: center; font-size: 0.75rem; margin-bottom: 5px;">
-                    Total Downloads: <span id="downloadCount" style="font-weight:bold;">0</span>
-                </div>
-
-                <div class="guide-box">
-                    <strong style="font-size: 0.75rem; color: #d68910; display: block; margin-bottom: 5px;">Installation Steps:</strong>
-                    <div class="step"><span>1.</span><span>Click <b>Download anyway</b> if prompted.</span></div>
-                    <div class="step"><span>2.</span><span>Open file and select <b>Install</b>.</span></div>
-                    <div class="step"><span>3.</span><span>Enable <b>Unknown Sources</b> if blocked.</span></div>
-                </div>
-
-                <div class="share-container">
-                    <span style="font-size: 0.7rem; color: #666;">Quick Share Link:</span>
-                    <div class="copy-group">
-                        <div id="displayLink">datcollectors.org/dl</div>
-                        <button class="copy-btn" onclick="copyAppLink()">Copy</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="note-box">
-                <h4 style="margin-top:0">🔐 Access Note</h4>
-                <p><small>Sign in with Heifer Account. Request M&E access if needed.</small></p>
-            </div>
-
-            <div class="note-box">
-                <h4 style="margin-top:0">📅 Data Update</h4>
-                <p><small>Check the report date filter for last refresh status.</small></p>
-            </div>
-        </aside>
-    </div>
+    <main class="dashboard-container">
+        <iframe 
+            title="cluster-performance" 
+            width="100%" 
+            height="100%" 
+            src="https://app.powerbi.com/reportEmbed?reportId=5eded2fa-4f25-4070-8027-167078ac1e50&autoAuth=true&ctid=da6a69e3-3bcd-4f44-a340-aead0cfda08f" 
+            frameborder="0" 
+            allowFullScreen="true">
+        </iframe>
+    </main>
 
     <script>
-        const appUrl = "https://datcollectors.org/dl";
+        // Simple tracker for the header button
         const btn = document.getElementById('downloadBtn');
-        const display = document.getElementById('downloadCount');
-
-        // Download Counter
-        let count = localStorage.getItem('saye_app_downloads') || 0;
-        display.innerText = count;
-
         btn.addEventListener('click', () => {
+            let count = localStorage.getItem('saye_app_downloads') || 0;
             count++;
             localStorage.setItem('saye_app_downloads', count);
-            display.innerText = count;
+            console.log("Downloads:", count);
         });
-
-        // Copy Logic
-        function copyAppLink() {
-            navigator.clipboard.writeText(appUrl).then(() => {
-                const copyBtn = document.querySelector('.copy-btn');
-                copyBtn.innerText = 'Copied!';
-                setTimeout(() => { copyBtn.innerText = 'Copy'; }, 2000);
-            });
-        }
     </script>
 </body>
 </html>
